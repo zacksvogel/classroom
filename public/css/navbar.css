@@ -1,0 +1,112 @@
+/*Nav Bar */
+.container2{
+    position: absolute;
+    left: 50%;
+    height: 50%;
+    font-family: 'amaticbold';
+
+}
+.box {
+    text-align: center;
+    color: white;
+
+}
+.one {
+    width: 300px;
+    height: 300px;
+    background-color: #0e1e31;
+    position: absolute;
+    top: 8px;
+    left:-766px;
+}
+
+.two {
+    background-color: #690308;
+    width: 1216px;
+    height: 300px;
+    position: absolute;
+    top: 8px;
+    left:-458px;
+}
+.glow:hover {
+    transition: box-shadow 0.4s ease;
+    box-shadow: 0 0 20px white;
+}
+.one p {
+	font-size: 5em;
+    margin-top: 80px;
+    line-height: 60px;
+}
+
+.two p {
+	font-size: 8em;
+    padding-top: 60px;
+}
+a {
+    color:white;
+    text-decoration: none;
+}
+a:visted {
+    color: white;
+    text-decoration: none;
+}
+a:hover {
+    color:white;
+    text-decoration: none;
+}
+
+
+@media all and (max-width: 1545px) {
+	.one {
+	    width: 240px;
+	    height: 240px;
+	    top: 6px;
+	    left:-612px;
+	}
+
+	.two {
+	    width: 972px;
+	    height: 240px;
+	    top: 6px;
+	    left:-366px;
+	}
+	.one p {
+		font-size: 4em;
+	    margin-top: 60px;
+	    line-height: 60px;
+	}
+	.two p {
+		font-size: 6em;
+	    padding-top: 50px;
+	}
+
+}
+
+
+@media all and (max-width: 1245px) {
+	.one {
+	    width: 180px;
+	    height: 180px;
+	    top: 6px;
+	    left:-462px;
+	}
+	.two {
+	    width: 729px;
+	    height: 180px;
+	    top: 6px;
+	    left:-276px;
+	}
+	.one p {
+		font-size: 3em;
+	    margin-top: 50px;
+	    line-height: 30px;
+	}
+	.two p {
+		font-size: 5em;
+	    padding-top: 30px;
+	}
+
+}
+
+
+/*End Nav Bar */

@@ -1,0 +1,665 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, 
+form, fieldset, input, p, blockquote, table, th, td, embed, object {
+    padding: 0;
+    margin: 0; 
+    }
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    }
+fieldset, img, abbr {
+    border: 0;
+    }
+address, caption, cite, code, dfn, em, 
+h1, h2, h3, h4, h5, h6, strong, th, var {
+    font-weight: normal;
+    font-style: normal;
+    }
+ul {
+    list-style: none;
+    }
+caption, th {
+    text-align: left;
+    }
+h1, h2, h3, h4, h5, h6 {
+    font-size: 1.0em;
+    }
+q:before, q:after {
+    content: '';
+    }
+a, ins {
+    text-decoration: none;
+    }
+/* end of browser reset */
+body {
+    background-color:#717a7d;
+}
+.container2{
+    position: absolute;
+    left: 50%;
+    height: 50%;
+    font-family: 'amaticbold';
+    font-size: 2em;
+}
+.box {
+    text-align:center;
+    color: white;
+}
+.one {
+    background-color:#0e1e31;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top:8px;
+    left:-766px;
+    z-index: 2;
+}
+.two {
+    background-color:#690308;
+    width: 1216px;
+    height: 300px;
+    position: absolute;
+    top: 8px;
+    left:-458px;
+    z-index: 2;
+}
+.glow:hover {
+    transition: box-shadow 0.4s ease;
+    box-shadow: 0 0 20px white;
+}
+.three {
+    background-color:#690308;
+    width: 300px;
+    height: 146px;
+    position: absolute;
+    top: 316px;
+    left:-766px;
+}
+.four {
+    background-color:#690308;
+    width: 300px;
+    height: 146px;
+    position: absolute;
+    top: 470px;
+    left:-766px;
+}
+.five {
+	background-color:#690308;
+	width: 300px;
+	height: 146px;
+	position: absolute;
+    top: 624px;
+    left:-766px;
+}
+.six {
+    background-color:#690308;
+    width: 300px;
+    height: 146px;
+    position: absolute;
+    top: 778px;
+    left:-766px;
+}
+.seven {
+	background-color:#690308;
+	width: 300px;
+	height: 146px;
+	position: absolute;
+    top: 932px;
+    left:-766px;
+}
+.eight {
+    background-color:#690308;
+    width: 300px;
+    height: 146px;
+    position: absolute;
+    top: 1086px;
+    left:-766px;
+}
+.nine {
+    background-color:#690308;
+    width: 604px;
+    height: 762px;
+    position: absolute;
+    top: 316px;
+    left:-458px;
+    padding-top: 25px;
+}
+.ten {
+    background-color:#034368;
+    width: 604px;
+    height: 150px;
+    position: absolute;
+    top: 316px;
+    left: 154px;
+}
+.eleven {
+    width: 604px;
+    height: 604px;
+    position: absolute;
+    top: 474px;
+    left: 154px;
+}
+#chart_example {
+    width: 604px;
+    height: 604px;
+}
+.centerLarge {
+    all: initial;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 300px;
+}
+.centerSmall {
+    all: initial;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 146px;
+}
+.text p {
+    color:white;
+    text-align: center;
+    font-family: 'amaticbold';
+    font-size: 2em
+}
+.text h3 {
+    color:white;
+    text-align: center;
+    font-family: 'amaticbold';
+    font-size: 4em
+}
+.one p {
+    font-size: 4em;
+}
+.two p {
+    font-size: 6em;
+}
+.nine h2 {
+    font-size: 1.5em;
+    padding-bottom: 10px;
+}
+.nine p {
+    font-family: Helvetica;
+    font-size: 0.7em;
+    padding-bottom: 20px;
+}
+.courses p {
+    font-size: 3em;
+}
+.example p {
+    font-size: 4em;
+}
+.textContainer {
+    width: 90%;
+}
+a {
+    color:white;
+    text-decoration: none;
+}
+a:visted {
+    color: white;
+    text-decoration: none;
+}
+a:hover {
+    color:white;
+    text-decoration: none;
+}
+
+/*start of individual page styles*/
+
+.xpchart {
+    background-color:#717a7d;
+    width: 908px;
+    height: 900px;
+    position: absolute;
+    top: 316px;
+    left: -766px;
+}
+#chart_div {
+    margin: -150px;
+    width: 1250px;
+    height: 1250px;
+}
+.points {
+    background-color: #690308;
+    width: 608px;
+    height: 146px;
+    position: absolute;
+    top: 316px;
+    left: 150px;
+}
+.xptable {
+    background-color:#690308;
+    width: 608px;
+    height: 200px;
+    position: absolute;
+    top: 470px;
+    left:150px;
+}
+table {
+    background-color:#690308;
+}
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+  padding: 8px;
+  line-height: 1;
+  vertical-align: top;
+  border-top: 2px solid #0e1e31;
+  border-bottom: 2px solid #0e1e31;
+}
+.table-hover > tbody > tr:hover {
+  background-color: #0e1e31;
+}
+td{
+    font-family: helvetica;
+    color: white;
+    font-size: .9em;
+}
+
+/*start of how to earn points*/
+.howToText {  
+    padding-top: 25px;    
+    background-color:#690308;
+    width: 608px;
+    height: 2225px;
+    position: absolute;
+    top: 316px;
+    left:-766px;
+    color:white;
+}
+.howToText h2 {
+    font-size: 2.5em;
+    padding-bottom: 10px;
+}
+.howToText p {
+    font-family: Helvetica;
+    font-size: 1em;
+    padding-bottom: 20px;
+}
+.howToChart {
+    background-color:#690308;
+    width: 908px;
+    height: 900px;
+    position: absolute;
+    top: 316px;
+    left:-150px;
+}
+thead td {
+    color:white;
+    font-size: 2.5em;
+    font-family: 'amaticbold';
+}
+
+
+/*end of how to earn points*/
+
+
+/*end of individual page styles*/
+
+
+
+
+
+@media all and (max-width: 1545px) {
+
+.container2{
+    font-size: 1.5em;
+}
+.one {
+    width: 240px;
+    height: 240px;
+    top:6px;
+    left:-612px;
+}
+.two {
+    width: 972px;
+    height: 240px;
+    top: 6px;
+    left:-366px;
+}
+.three {
+    width: 240px;
+    height: 117px;
+    top: 255px;
+    left:-612px;
+}
+.four {
+    width: 240px;
+    height: 117px;
+    top: 378px;
+    left:-612px;
+}
+.five {
+    width: 240px;
+    height: 117px;
+    top: 502px;
+    left:-612px;
+}
+.six {
+    width: 240px;
+    height: 117px;
+    top: 625px;
+    left:-612px;
+}
+.seven {
+    width: 240px;
+    height: 117px;
+    top: 748px;
+    left:-612px;
+}
+.eight {
+    width: 240px;
+    height: 117px;
+    top: 871px;
+    left:-612px;
+}
+.nine {
+    width: 483px;
+    height: 613px;
+    top: 252px;
+    left:-366px;
+}
+.ten {
+    width: 483px;
+    height: 117px;
+    top: 252px;
+    left: 123px;
+}
+.eleven {
+    width: 483px;
+    height: 490px;
+    top: 375px;
+    left: 123px;
+}
+#chart_example {
+    width: 483px;
+    height: 490px;
+}
+.centerLarge {
+    height: 240px;
+}
+.centerSmall {
+    height: 117px;
+}
+.text p {
+    font-size: 2em
+}
+.text h3 {
+    font-size: 3.5em
+}
+.one p {
+    font-size: 3em;
+}
+.two p {
+    font-size: 6em;
+}
+.nine h2 {
+    font-size: 1.5em;
+}
+.nine p {
+    font-size: 0.7em;
+}
+.courses p {
+    font-size: 2.5em;
+}
+
+
+/*start of individual page styles*/
+
+.xpchart {
+    width: 732px;
+    height: 720px;
+    top: 252px;
+    left: -612px;
+}
+#chart_div {
+    margin: -150px;
+    width: 1050px;
+    height: 1050px;
+}
+.points {
+    width: 480px;
+    height: 117px;
+    top: 252px;
+    left: 126px;
+}
+.xptable {
+    width: 480px;
+    height: 200px;
+    top: 375px;
+    left: 126px;
+}
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+  padding: 6px;
+  line-height: 1.2;
+}
+
+td{
+    font-size: 1em;
+}
+
+/*start of how to earn points*/
+.howToText {    
+    padding-top: 20px;  
+    width: 486px;
+    height: 2075px;
+    top: 252px;
+    left:-612px;
+}
+.howToText h2 {
+    font-size: 2.5em;
+    padding-bottom: 10px;
+}
+.howToText p {
+    font-size: 1.2em;
+    padding-bottom: 20px;
+}
+.howToChart {
+    background-color:#690308;
+    width: 726px;
+    height: 200px;
+    position: absolute;
+    top: 252px;
+    left:-120px;
+}
+/*end of how to earn points*/
+
+/*end of individual page styles*/
+
+
+
+
+} /* End of 1200 x 1200 media*/
+
+
+
+
+
+@media all and (max-width: 1245px) {
+.container2{
+    font-size: 1em;
+}
+.one {
+    width: 180px;
+    height: 180px;
+    top: 6px;
+    left:-462px;
+}
+.two {
+    width: 729px;
+    height: 180px;
+    top: 6px;
+    left:-276px;
+}
+.three {
+    width: 180px;
+    height: 87px;
+    top: 192px;
+    left:-462px;
+}
+.four {
+    width: 180px;
+    height: 87px;
+    top: 286px;
+    left:-462px;
+}
+.five {
+    width: 180px;
+    height: 87px;
+    top: 380px;
+    left:-462px;
+}
+.six {
+    width: 180px;
+    height: 87px;
+    top: 474px;
+    left:-462px;
+}
+.seven {
+    width: 180px;
+    height: 87px;
+    top: 568px;
+    left:-462px;
+}
+.eight {
+    width: 180px;
+    height: 87px;
+    top: 662px;
+    left:-462px;
+}
+.nine {
+    width: 361px;
+    height: 464px;
+    top: 192px;
+    left:-276px;
+    padding-top: 10px;
+}
+.ten {
+    width: 361px;
+    height: 87px;
+    top: 192px;
+    left: 92px;
+}
+.eleven {
+    width: 361px;
+    height: 372px;
+    top: 284px;
+    left: 92px;
+}
+#chart_example {
+    width: 361px;
+    height: 372px;
+}
+.centerLarge {
+    height: 180px;
+}
+.centerSmall {
+    height: 87px;
+}
+.text p {
+    font-size: 1.5em
+}
+.text h3 {
+    font-size: 3em
+}
+.one p {
+    font-size: 2.5em;
+}
+.two p {
+    font-size: 4em;
+}
+.nine h2 {
+    font-size: 1.5em;
+    padding-bottom: 5px;
+}
+.nine p {
+    font-size: 0.9em;
+    padding-bottom: 10px;
+}
+.courses p {
+    font-size: 1.9em;
+}
+
+/*start of individual page styles*/
+
+.xpchart {
+    width: 548px;
+    height: 540px;
+    top: 192px;
+    left: -462px;
+}
+#chart_div {
+    margin: -125px;
+    width: 825px;
+    height: 825px;
+}
+.points {
+    width: 360px;
+    height: 87px;
+    top: 192px;
+    left: 92px;
+}
+.xptable {
+    width: 360px;
+    height: 200px;
+    top: 285px;
+    left: 92px;
+}
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+  padding: 5px;
+  line-height: 1;
+}
+
+td{
+    font-size: 1.1em;
+}
+
+/*start of how to earn points*/
+.howToText {  
+    padding-top: 20px;  
+    width: 366px;
+    height: 1325px;
+    top: 192px;
+    left:-462px;
+}
+.howToText h2 {
+    font-size: 2.5em;
+    padding-bottom: 10px;
+}
+.howToText p {
+    font-size: 1.2em;
+    padding-bottom: 20px;
+}
+.howToChart {
+    background-color:#690308;
+    width: 542px;
+    height: 546px;
+    position: absolute;
+    top: 192px;
+    left:-90px;
+}
+/*end of how to earn points*/
+
+
+/*end of individual page styles*/
+
+} /* End of 900 x 900 media*/
+
+
+
+

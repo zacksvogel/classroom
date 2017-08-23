@@ -1,0 +1,1034 @@
+body {
+    background-color:#717a7d;
+}
+.one {
+	left: -725px;
+}
+.two {
+	width: 1134px;
+	left: -417px;
+}
+/*1450*/
+.chart {
+	width: 450px;
+	height: 240px;
+	position: absolute;
+	top: 316px;
+	left: -725px;
+	background-color:#690308;
+}
+#chart_div {
+    width: 450px;
+    height: 488px;
+}
+.sidebarBox1 {
+	background-color:#690308;
+	width: 450px;
+	height: 240px;
+	position: absolute;
+	top: 564px;
+	left:-725px;
+}
+.sidebarBox2 {
+	background-color:#690308;
+	width: 450px;
+	height: 240px;
+	position: absolute;
+	top: 812px;
+	left:-725px;
+}
+.sidebarBox3 {
+	background-color:#690308;
+	width: 450px;
+	height: 240px;
+	position: absolute;
+	top: 1060px;
+	left:-725px;
+}
+.sidebarBox4 {
+	background-color:#690308;
+	width: 450px;
+	height: 240px;
+	position: absolute;
+	top: 1308px;
+	left:-725px;
+}
+.sidebarBox5 {
+	background-color:#690308;
+	width: 450px;
+	height: 240px;
+	position: absolute;
+	top: 1556px;
+	left:-725px;
+}
+.boxSetup {
+	width: 240px;
+    height: 240px;
+    position: absolute;
+}
+.unit1 {
+    background-color:#0e1e31;
+    top: 316px;
+    left: -267px;
+}
+.unit2 {
+    background-color:#034368;
+    top: 316px;
+    left: -19px;
+}
+.unit3 {
+    background-color:#0e1e31;
+    top: 316px;
+    left: 229px;
+}
+.unit4 {
+    background-color:#034368;
+    top: 316px;
+    left: 477px;
+}
+.unit5 {
+    background-color:#0e1e31;
+    top: 564px;
+    left: -267px;
+}
+.unit6 {
+    background-color:#034368;
+    top: 564px;
+    left: -19px;
+}
+.unit7 {
+    background-color:#0e1e31;
+    top: 564px;
+    left: 229px;
+}
+.unit8 {
+    background-color:#034368;
+    top: 564px;
+    left: 477px;
+}
+.unit9 {
+    background-color:#0e1e31;
+    top: 812px;
+    left: -267px;
+}
+.unit10 {
+    background-color:#034368;
+    top: 812px;
+    left: -19px;
+}
+.unit11 {
+    background-color:#0e1e31;
+    top: 812px;
+    left: 229px;
+}
+.unit12 {
+    background-color:#034368;
+    top: 812px;
+    left: 477px;
+}
+.unit13 {
+    background-color:#0e1e31;
+    top: 1060px;
+    left: -267px;
+}
+.unit14 {
+    background-color:#034368;
+    top: 1060px;
+    left: -19px;
+}
+.unit15 {
+    background-color:#0e1e31;
+    top: 1060px;
+    left: 229px;
+}
+.unit16 {
+    background-color:#034368;
+    top: 1060px;
+    left: 477px;
+}
+.unit17 {
+    background-color:#0e1e31;
+    top: 1308px;
+    left: -267px;
+}
+.unit18 {
+    background-color:#034368;
+    top: 1308px;
+    left: -19px;
+}
+.unit19 {
+    background-color:#0e1e31;
+    top: 1308px;
+    left: 229px;
+}
+.unit20 {
+    background-color:#034368;
+    top: 1308px;
+    left: 477px;
+}
+.unit21 {
+    background-color:#0e1e31;
+    top: 1556px;
+    left: -267px;
+}
+.center {
+	all: initial;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 240px;
+}
+
+.text {
+    text-align: center
+}
+.text h1 {
+    font-family: 'amaticbold';
+    font-size: 3em;
+}
+.text p {
+    font-family: helvetica;
+    font-size: 1em
+}
+/* Start Chapter pages Formatting */
+.obj {
+	width: 450px;
+	height: 616px;
+	position: absolute;
+	top: 316px;
+	left: -725px;
+	background-color:#690308;
+}
+.objCenter {
+	all: initial;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 616px;
+}
+.objLong {
+	width: 450px;
+	height: 616px;
+	position: absolute;
+	top: 316px;
+	left: -725px;
+	background-color:#690308;
+}
+.objCenterLong {
+	all: initial;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 616px;
+}
+.text h1 {
+    font-family: 'amaticbold';
+    font-size: 3em;
+    padding-bottom: 25px;
+    text-align: center;
+    color: white;
+}
+.text p {
+    font-family: helvetica;
+    font-size: 1.2em;
+    color: white;
+}
+.text h2 {
+    font-family: 'amaticbold';
+    font-size: 3em;
+    text-align: center;
+    color: white;
+}
+.text h3 {
+    font-family: helvetica;
+    font-size: 1em;
+    text-align: center;
+    margin: 0;
+    color: white;
+}
+.objList li{
+	margin-left: -15px;
+	margin-right: 15px;
+	padding-bottom: 20px;
+	font-family: helvetica;
+    font-size: 1.2em;
+    color: white;
+}
+
+.chTitle {
+	background-color:#0e1e31;
+	height: 200px;
+	width: 984px;
+	position: absolute;
+	top: 316px;
+	left: -267px;
+}
+.chCenter {
+	all: initial;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 200px;
+}
+.lesson1 {
+	background-color:#034368;
+	height: 200px;
+	width: 488px;
+	position: absolute;
+	top: 524px;
+	left: -267px;
+}
+.lesson2 {
+	background-color:#034368;
+	height: 200px;
+	width: 488px;
+	position: absolute;
+	top: 524px;
+	left: 229px;
+}
+.lesson3 {
+	background-color:#034368;
+	height: 200px;
+	width: 488px;
+	position: absolute;
+	top: 732px;
+	left: -267px;
+}
+.lesson4 {
+	background-color:#034368;
+	height: 200px;
+	width: 488px;
+	position: absolute;
+	top: 732px;
+	left: 229px;
+}
+.lesson5 {
+	background-color:#034368;
+	height: 200px;
+	width: 488px;
+	position: absolute;
+	top: 940px;
+	left: -267px;
+}
+.lesson6 {
+	background-color:#034368;
+	height: 200px;
+	width: 488px;
+	position: absolute;
+	top: 940px;
+	left: 229px;
+}
+.lesson7 {
+	background-color:#034368;
+	height: 200px;
+	width: 488px;
+	position: absolute;
+	top: 1148px;
+	left: -267px;
+}
+.lesson8 {
+	background-color:#034368;
+	height: 200px;
+	width: 488px;
+	position: absolute;
+	top: 1148px;
+	left: 229px;
+}
+.lesson9 {
+	background-color:#034368;
+	height: 200px;
+	width: 488px;
+	position: absolute;
+	top: 1356px;
+	left: -267px;
+}
+.lesson10 {
+	background-color:#034368;
+	height: 200px;
+	width: 488px;
+	position: absolute;
+	top: 1356px;
+	left: 229px;
+}
+.lesson11 {
+	background-color:#034368;
+	height: 200px;
+	width: 488px;
+	position: absolute;
+	top: 1564px;
+	left: -267px;
+}
+.lesson12 {
+	background-color:#034368;
+	height: 200px;
+	width: 488px;
+	position: absolute;
+	top: 1564px;
+	left: 229px;
+}
+.lesson13 {
+	background-color:#034368;
+	height: 200px;
+	width: 488px;
+	position: absolute;
+	top: 1564px;
+	left: -267px;
+}
+.lesson14 {
+	background-color:#034368;
+	height: 200px;
+	width: 488px;
+	position: absolute;
+	top: 1564px;
+	left: 229px;
+}
+/* End Chapter pages Formatting */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media all and (max-width: 1545px) {
+	.one {
+		left: -625px;
+	}
+	.two {
+		width: 1002px;
+		left: -377px;
+	}
+	.chart {
+		width: 450px;
+		height: 192px;
+		top: 256px;
+		left: -625px;
+	}
+	#chart_div {
+	    width: 450px;
+	    height: 392px;
+	}
+	.sidebarBox1 {
+		width: 450px;
+		height: 192px;
+		top: 454px;
+		left:-625px;
+	}
+	.sidebarBox2 {
+		width: 450px;
+		height: 192px;
+		top: 652px;
+		left:-625px;
+	}
+	.sidebarBox3 {
+		width: 450px;
+		height: 192px;
+		position: absolute;
+		top: 850px;
+		left:-625px;
+	}
+	.sidebarBox4 {
+		width: 450px;
+		height: 192px;
+		position: absolute;
+		top: 1048px;
+		left:-625px;
+	}
+	.sidebarBox5 {
+		width: 450px;
+		height: 192px;
+		top: 1246px;
+		left:-625px;
+	}
+	.boxSetup {
+		width: 192px;
+	    height: 192px;
+	    position: absolute;
+	}
+	.unit1 {
+	    background-color:#0e1e31;
+	    top: 256px;
+	    left: -167px;
+	}
+	.unit2 {
+	    background-color:#034368;
+	    top: 256px;
+	    left: 33px;
+	}
+	.unit3 {
+	    background-color:#0e1e31;
+	    top: 256px;
+	    left: 233px;
+	}
+	.unit4 {
+	    background-color:#034368;
+	    top: 256px;
+	    left: 433px;
+	}
+	.unit5 {
+	    background-color:#0e1e31;
+	    top: 456px;
+	    left: -167px;
+	}
+	.unit6 {
+	    background-color:#034368;
+	    top: 456px;
+	    left: 33px;
+	}
+	.unit7 {
+	    background-color:#0e1e31;
+	    top: 456px;
+	    left: 233px;
+	}
+	.unit8 {
+	    background-color:#034368;
+	    top: 456px;
+	    left: 433px;
+	}
+	.unit9 {
+	    background-color:#0e1e31;
+	    top: 656px;
+	    left: -167px;
+	}
+	.unit10 {
+	    background-color:#034368;
+	    top: 656px;
+	    left: 33px;
+	}
+	.unit11 {
+	    background-color:#0e1e31;
+	    top: 656px;
+	    left: 233px;
+	}
+	.unit12 {
+	    background-color:#034368;
+	    top: 656px;
+	    left: 433px;
+	}
+	.unit13 {
+	    background-color:#0e1e31;
+	    top: 856px;
+	    left: -167px;
+	}
+	.unit14 {
+	    background-color:#034368;
+	    top: 856px;
+	    left: 33px;
+	}
+	.unit15 {
+	    background-color:#0e1e31;
+	    top: 856px;
+	    left: 233px;
+	}
+	.unit16 {
+	    background-color:#034368;
+	    top: 856px;
+	    left: 433px;
+	}
+	.unit17 {
+	    background-color:#0e1e31;
+	    top: 1056px;
+	    left: -167px;
+	}
+	.unit18 {
+	    background-color:#034368;
+	    top: 1056px;
+	    left: 33px;
+	}
+	.unit19 {
+	    background-color:#0e1e31;
+	    top: 1056px;
+	    left: 233px;
+	}
+	.unit20 {
+	    background-color:#034368;
+	    top: 1056px;
+	    left: 433px;
+	}
+	.unit21 {
+	    background-color:#0e1e31;
+	    top: 1256px;
+	    left: -167px;
+	}
+	.center {
+		all: initial;
+	    display: flex;
+	    justify-content: center;
+	    flex-direction: column;
+	    height: 192px;
+	}
+	.text {
+	    text-align: center;
+	}
+	.text h1 {
+	    font-size: 2.5em;
+	}
+	.text p {
+	    font-size: 0.9em
+	}
+	
+	/* Start Chapter pages Formatting */
+	.obj {
+		width: 360px;
+		height: 466px;
+		top: 256px;
+		left: -625px;
+	}
+	.objLong {
+		width: 360px;
+		height: 624px;
+		top: 256px;
+		left: -625px;
+	}
+	.objCenter {
+	    height: 466px;
+	}
+	.objCenterLong {
+	    height: 624px;
+	}
+	.text h1 {
+	    font-size: 2.5em;
+	    padding-bottom: 10px;
+	}
+	.text p {
+	    font-size: 1em;
+	}
+	.text h2 {
+	    font-size: 2.5em;
+	}
+	.text h3 {
+	    font-size: 1em;
+	}
+	.objList li{
+	    font-size: 1em;
+	}
+	.chTitle {
+		height: 150px;
+		width: 882px;
+		top: 256px;
+		left: -257px;
+	}
+	.chCenter {
+	    height: 150px;
+	}
+	.lesson1 {
+		height: 150px;
+		width: 437px;
+		top: 414px;
+		left: -257px;
+	}
+	.lesson2 {
+		height: 150px;
+		width: 437px;
+		top: 414px;
+		left: 188px;
+	}
+	.lesson3 {
+		height: 150px;
+		width: 437px;
+		top: 572px;
+		left: -257px;
+	}
+	.lesson4 {
+		height: 150px;
+		width: 437px;
+		top: 572px;
+		left: 188px;
+	}
+	.lesson5 {
+		height: 150px;
+		width: 437px;
+		top: 730px;
+		left: -257px;
+	}
+	.lesson6 {
+		height: 150px;
+		width: 437px;
+		top: 730px;
+		left: 188px;
+	}
+	.lesson7 {
+		height: 150px;
+		width: 437px;
+		top: 888px;
+		left: -257px;
+	}
+	.lesson8 {
+		height: 150px;
+		width: 437px;
+		top: 888px;
+		left: 188px;
+	}
+	.lesson9 {
+		height: 150px;
+		width: 437px;
+		top: 1046px;
+		left: -257px;
+	}
+	.lesson10 {
+		height: 150px;
+		width: 437px;
+		top: 1046px;
+		left: 188px;
+	}
+	.lesson11 {
+		height: 150px;
+		width: 437px;
+		top: 1204px;
+		left: -257px;
+	}
+	.lesson12 {
+		height: 150px;
+		width: 437px;
+		top: 1204px;
+		left: 188px;
+	}
+	.lesson13 {
+		height: 150px;
+		width: 437px;
+		top: 1362px;
+		left: -257px;
+	}
+	.lesson14 {
+		height: 150px;
+		width: 437px;
+		top: 1362px;
+		left: 188px;
+	}
+	/* End Chapter pages Formatting */
+}
+
+
+
+
+
+@media all and (max-width: 1275px) { 
+	.one {
+	left: -463px;
+	}
+	.two {
+		width: 740px;
+		left: -277px;
+	}
+	/*1450*/
+	.chart {
+		width: 350px;
+		height: 138px;
+		position: absolute;
+		top: 192px;
+		left: -463px;
+		background-color:#690308;
+	}
+	#chart_div {
+	    width: 350px;
+	    height: 282px;
+	}
+	.sidebarBox1 {
+		width: 350px;
+		height: 138px;
+		top: 336px;
+		left:-463px;
+	}
+	.sidebarBox2 {
+		width: 350px;
+		height: 138px;
+		top: 480px;
+		left:-463px;
+	}
+	.sidebarBox3 {
+		width: 350px;
+		height: 138px;
+		position: absolute;
+		top: 624px;
+		left:-463px;
+	}
+	.sidebarBox4 {
+		width: 350px;
+		height: 138px;
+		position: absolute;
+		top: 768px;
+		left:-463px;
+	}
+	.sidebarBox5 {
+		width: 350px;
+		height: 138px;
+		top: 912px;
+		left:-463px;
+	}
+	.boxSetup {
+		width: 138px;
+	    height: 138px;
+	    position: absolute;
+	}
+	.unit1 {
+	    background-color:#0e1e31;
+	    top: 192px;
+	    left: -107px;
+	}
+	.unit2 {
+	    background-color:#034368;
+	    top: 192px;
+	    left: 37px;
+	}
+	.unit3 {
+	    background-color:#0e1e31;
+	    top: 192px;
+	    left: 181px;
+	}
+	.unit4 {
+	    background-color:#034368;
+	    top: 192px;
+	    left: 325px;
+	}
+	.unit5 {
+	    background-color:#0e1e31;
+	    top: 336px;
+	    left: -107px;
+	}
+	.unit6 {
+	    background-color:#034368;
+	    top: 336px;
+	    left: 37px;
+	}
+	.unit7 {
+	    background-color:#0e1e31;
+	    top: 336px;
+	    left: 181px;
+	}
+	.unit8 {
+	    background-color:#034368;
+	    top: 336px;
+	    left: 325px;
+	}
+	.unit9 {
+	    background-color:#0e1e31;
+	    top: 480px;
+	    left: -107px;
+	}
+	.unit10 {
+	    background-color:#034368;
+	    top: 480px;
+	    left: 37px;
+	}
+	.unit11 {
+	    background-color:#0e1e31;
+	    top: 480px;
+	    left: 181px;
+	}
+	.unit12 {
+	    background-color:#034368;
+	    top: 480px;
+	    left: 325px;
+	}
+	.unit13 {
+	    background-color:#0e1e31;
+	    top: 624px;
+	    left: -107px;
+	}
+	.unit14 {
+	    background-color:#034368;
+	    top: 624px;
+	    left: 37px;
+	}
+	.unit15 {
+	    background-color:#0e1e31;
+	    top: 624px;
+	    left: 181px;
+	}
+	.unit16 {
+	    background-color:#034368;
+	    top: 624px;
+	    left: 325px;
+	}
+	.unit17 {
+	    background-color:#0e1e31;
+	    top: 768px;
+	    left: -107px;
+	}
+	.unit18 {
+	    background-color:#034368;
+	    top: 768px;
+	    left: 37px;
+	}
+	.unit19 {
+	    background-color:#0e1e31;
+	    top: 768px;
+	    left: 181px;
+	}
+	.unit20 {
+	    background-color:#034368;
+	    top: 768px;
+	    left: 325px;
+	}
+	.unit21 {
+	    background-color:#0e1e31;
+	    top: 912px;
+	    left: -107px;
+	}
+	.center {
+		all: initial;
+	    display: flex;
+	    justify-content: center;
+	    flex-direction: column;
+	    height: 138px;
+	}
+	.text h1 {
+	    font-size: 2.0em;
+	}
+	.text p {
+	    font-size: 0.7em
+	}
+
+
+
+
+
+
+
+
+/* Start Chapter pages Formatting */
+	.obj {
+		width: 270px;
+		height: 418px;
+		top: 192px;
+		left: -463px;
+	}
+	.objCenter {
+	    height: 418px;
+	}
+	.objLong {
+		width: 270px;
+		height: 418px;
+		top: 192px;
+		left: -463px;
+	}
+	.objCenterLong {
+	    height: 418px;
+	}
+	.text {
+	    text-align: center;
+	}
+	.text h1 {
+	    font-size: 2em;
+	    
+	}
+	.text p {
+	    font-size: .8em;
+	}
+	.text h2 {
+	    font-size: 2em;
+	}
+	.text h3 {
+	    font-size: .8em;
+	}
+	.objList li{
+	    margin-left: -25px;
+		margin-right: 5px;
+		padding-bottom: 10px;
+	    font-size: .8em;
+	}
+	.chTitle {
+		height: 100px;
+		width: 650px;
+		top: 192px;
+		left: -187px;
+	}
+	.chCenter {
+	    height: 100px;
+	}
+	.lesson1 {
+		height: 100px;
+		width: 322px;
+		top: 298px;
+		left: -187px;
+	}
+	.lesson2 {
+		height: 100px;
+		width: 322px;
+		top: 298px;
+		left: 141px;
+	}
+	.lesson3 {
+		height: 100px;
+		width: 322px;
+		top: 404px;
+		left: -187px;
+	}
+	.lesson4 {
+		height: 100px;
+		width: 322px;
+		top: 404px;
+		left: 141px;
+	}
+	.lesson5 {
+		height: 100px;
+		width: 322px;
+		top: 510px;
+		left: -187px;
+	}
+	.lesson6 {
+		height: 100px;
+		width: 322px;
+		top: 510px;
+		left: 141px;
+	}
+	.lesson7 {
+		height: 100px;
+		width: 322px;
+		top: 616px;
+		left: -187px;
+	}
+	.lesson8 {
+		height: 100px;
+		width: 322px;
+		top: 616px;
+		left: 141px;
+	}
+	.lesson9 {
+		height: 100px;
+		width: 322px;
+		top: 722px;
+		left: -187px;
+	}
+	.lesson10 {
+		height: 100px;
+		width: 322px;
+		top: 722px;
+		left: 141px;
+	}
+	.lesson11 {
+		height: 100px;
+		width: 322px;
+		top: 828px;
+		left: -187px;
+	}
+	.lesson12 {
+		height: 100px;
+		width: 322px;
+		top: 828px;
+		left: 141px;
+	}
+	.lesson13 {
+		height: 100px;
+		width: 322px;
+		top: 934px;
+		left: -187px;
+	}
+	.lesson14 {
+		height: 100px;
+		width: 322px;
+		top: 934px;
+		left: 141px;
+	}
+	/*End Chapter pages Formatting*/
+
+
+}

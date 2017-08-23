@@ -1,0 +1,21 @@
+.clockWordEnabled, .itis {
+    color: white;
+    text-shadow: white 0 0 5px, white 0 0 15px;
+    font-weight: 300;
+}
+
+.clockWordDisabled, .wordClock {
+    color: #000000;
+}
+.clockContainer {
+    position: relative;
+    text-align: center;
+    line-height: 60px;
+}
+.wordClock {
+    display: inline-block;
+    margin: auto;
+    font-family: monospace;
+    font-size: 35pt;
+    text-align: center;
+}

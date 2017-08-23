@@ -1,0 +1,1333 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, 
+form, fieldset, input, p, blockquote, table, th, td, embed, object {
+    padding: 0;
+    margin: 0; 
+    }
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    }
+fieldset, img, abbr {
+    border: 0;
+    }
+address, caption, cite, code, dfn, em, 
+h1, h2, h3, h4, h5, h6, strong, th, var {
+    font-weight: normal;
+    font-style: normal;
+    }
+ul {
+    list-style: none;
+    }
+caption, th {
+    text-align: left;
+    }
+h1, h2, h3, h4, h5, h6 {
+    font-size: 1.0em;
+    }
+q:before, q:after {
+    content: '';
+    }
+a, ins {
+    text-decoration: none;
+    }
+/* end of browser reset */
+body {
+    background-color:#717a7d;
+}
+.mainContainer{
+    position: absolute;
+    left: 50%;
+    height: 50%;
+    font-family: 'amaticbold';
+    font-size: 2em;
+}
+.box {
+    text-align:center;
+    color: white;
+}
+.one {
+    width: 146px;
+    height: 146px;
+    background-color:#0e1e31;
+    position: absolute;
+    top: 8px;
+    left:-766px;
+}
+
+.two {
+    width: 146px;
+    height: 146px;
+    background-color:#034368;
+    position: absolute;
+    top:8px;
+    left: -612px;
+}
+.three {
+    background-color:#034368;
+    width: 146px;
+    height: 146px;
+    position: absolute;
+    top:162px;
+    left:-766px;
+}
+.four {
+    background-color:#0e1e31;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top:8px;
+    left:-766px;
+}
+.five {
+    background-color:#690308;
+    width: 1216px;
+    height: 300px;
+    position: absolute;
+    top: 8px;
+    left:-458px;
+}
+.glow:hover {
+    transition: box-shadow 0.4s ease;
+    box-shadow: 0 0 20px white;
+}
+.six {
+    background-color:#690308;
+    width: 300px;
+    height: 146px;
+    position: absolute;
+    top: 316px;
+    left:-766px;
+}
+.sixb {
+    background-color:#690308;
+    width: 300px;
+    height: 146px;
+    position: absolute;
+    top: 470px;
+    left:-766px;
+}
+.seven {
+	background-color:#690308;
+	width: 600px;
+	height: 300px;
+	position: absolute;
+    top: 316px;
+    left:-458px;
+}
+.eight {
+	
+	width: 300px;
+	height: 300px;
+	position: absolute;
+    top: 316px;
+    left: 150px;
+}
+.ninea {
+    background-color:#0e1e31;
+    width: 146px;
+    height: 146px;
+    position: absolute;
+    top: 316px;
+    left: 458px;
+}
+.nineb {
+    background-color:#034368;
+    width: 146px;
+    height: 146px;
+    position: absolute;
+    top: 316px;
+    left: 612px;
+}
+.ninec {
+    background-color:#034368;
+    width: 146px;
+    height: 146px;
+    position: absolute;
+    top: 470px;
+    left: 458px;
+}
+.nined {
+    background-color:#0e1e31;
+    width: 146px;
+    height: 146px;
+    position: absolute;
+    top: 470px;
+    left: 612px;
+}
+.ten {
+	background-color:#690308;
+	width: 300px;
+	height: 146px;
+	position: absolute;
+    top: 624px;
+    left:-766px;
+}
+.tenb {
+    background-color:#690308;
+    width: 300px;
+    height: 146px;
+    position: absolute;
+    top: 778px;
+    left:-766px;
+}
+.eleven {
+	
+	width: 296px;
+	height: 300px;
+	position: absolute;
+    top: 624px;
+    left: -458px;
+}
+.twelve {
+	background-color:#690308;
+	width: 296px;
+	height: 300px;
+	position: absolute;
+    top: 624px;
+    left: -154px;
+}
+.thirteen {
+	background-color:#0e1e31;
+	width: 150px;
+	height: 146px;
+	position: absolute;
+    top: 624px;
+    left: 150px;
+}
+.thirteenb {
+    background-color:#034368;
+    width: 150px;
+    height: 146px;
+    position: absolute;
+    top: 778px;
+    left: 150px;
+}
+.fourteen {
+	background-color:#690308;
+	width: 450px;
+	height: 300px;
+	position: absolute;
+    top: 624px;
+    left: 308px;
+}
+.fifteen {
+	background-color:#690308;
+	width: 300px;
+	height: 146px;
+	position: absolute;
+    top: 932px;
+    left:-766px;
+}
+.fifteenb {
+    background-color:#690308;
+    width: 300px;
+    height: 146px;
+    position: absolute;
+    top: 1086px;
+    left:-766px;
+}
+.sixteen {
+	background-color:#6882a1;
+	width: 600px;
+	height: 300px;
+	position: absolute;
+    top: 932px;
+    left:-458px;
+}
+.sixteena {
+    background-color:#0e1e31;
+    width: 146px;
+    height: 146px;
+    position: absolute;
+    top: 1086px;
+    left:-458px;
+}
+.sixteenb {
+    background-color:#034368;
+    width: 146px;
+    height: 146px;
+    position: absolute;
+    top: 932px;
+    left:-308px;
+}
+.sixteenc {
+    background-color:#0e1e31;
+    width: 146px;
+    height: 146px;
+    position: absolute;
+    top: 1086px;
+    left:-154px;
+}
+.sixteend {
+    background-color:#034368;
+    width: 146px;
+    height: 146px;
+    position: absolute;
+    top: 932px;
+    left: -4px;
+}
+.seventeen {
+	background-color:#690308;
+	width: 608px;
+	height: 300px;
+	position: absolute;
+    top: 932px;
+    left: 150px;
+}
+.eighteen {
+	background-color:#690308;
+	width: 300px;
+	height: 300px;
+	position: absolute;
+    top: 1240px;
+    left:-766px;
+}
+.nineteen {
+	
+	width: 300px;
+	height: 300px;
+	position: absolute;
+    top: 1240px;
+    left:-458px;
+}
+.nineteen img {
+    margin-top: 50px;
+}
+.twenty {
+	background-color:#690308;
+	width: 600px;
+	height: 300px;
+	position: absolute;
+    top: 1240px;
+    left:-150px;
+    margin-bottom: 8px;
+}
+.twentyone {
+	background-color:#0e1e31;
+	width: 146px;
+	height: 146px;
+	position: absolute;
+    top: 1240px;
+    left: 458px;
+}
+.twentytwo {
+    background-color:#034368;
+    width: 146px;
+    height: 146px;
+    position: absolute;
+    top: 1240px;
+    left: 612px;
+}
+.twentythree {
+    background-color:#034368;
+    width: 146px;
+    height: 146px;
+    position: absolute;
+    top: 1394px;
+    left: 458px;
+}
+.twentyfour {
+    background-color:#0e1e31;
+    width: 146px;
+    height: 146px;
+    position: absolute;
+    top: 1394px;
+    left: 612px;
+
+}
+.centerLarge {
+    all: initial;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 300px;
+}
+.centerSmall {
+    all: initial;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 146px;
+}
+.text p {
+    color:white;
+    text-align: center;
+    font-family: 'amaticbold';
+    font-size: 2em
+}
+.small p{
+    font-size: 2em;
+}
+.five p {
+    font-size: 6em;
+}
+.weather p {
+    font-size: 3.5em;
+}
+.courses p {
+    font-size: 3em;
+}
+.sliderText h2 {
+    color:white;
+    text-align: center;
+    font-family: 'amaticbold';
+    font-size: 3em
+}
+.sliderText p {
+    font-family: helvetica;
+    text-align: center;
+    color: white;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    padding: 20px 10px 15px 10px;
+}
+.sliderText h3 {
+    color:white;
+    text-align: center;
+    font-family: 'amaticbold';
+    font-size: 2em;
+}
+.eighteen p, .twelve p{
+    font-size: 3em;
+}
+.thirteen img{
+    margin-top: 15px;
+}
+.copyright {
+    font-family:Arial;
+}
+.lyonsLogo img {
+    height: 300px;
+}
+
+
+/*start calendar formatting*/
+.calendarContainer {
+    width: 425px;
+}
+
+p.calendar {
+    font-size: 2em;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    text-decoration: underline;
+}
+p.event {
+    font-family: 'amaticbold';
+    font-size: 1.75em;
+    padding-bottom: 30px;
+    line-height: 1em;
+}
+p.date {
+    font-family: helvetica;
+    font-size: .6em;
+}
+p.location {
+    font-family: helvetica;
+    font-size: .6em;
+}
+p.time {
+    font-family: helvetica;
+    font-size: .6em;
+}
+/*end calendar formatting*/
+
+/* Weather Formatting*/
+.ninec img {
+    height: 146px;
+}
+.nined h1{
+    font-size: 2em;
+    text-align: center;
+    font-family: 'amaticbold';
+}
+/* End Weather Formatting*/
+
+
+/* Countdown Timer Formatting*/
+.clock-builder-text {
+    width: 296px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.eleven p{
+    font-size: 2.5em;
+    margin-top: 25px;
+    line-height: 0.5em;
+}
+.eleven p span{
+    font-size: 0.5em;
+    line-height: 0.5em;
+}
+.clock-builder-text p {
+    font-size: 1.5em;
+    margin-top: 18px;
+}
+.clock-builder-output-days {
+    background-color:#0e1e31;
+    width: 144px;
+    height: 116px;
+    position: absolute;
+    top: 60px;
+    left: 0;
+}
+.clock-builder-output-hours {
+    background-color:#034368;
+    width: 144px;
+    height: 116px;
+    position: absolute;
+    top: 60px;
+    left: 152px;
+}
+
+.clock-builder-output-minutes {
+    background-color:#034368;
+    width: 144px;
+    height: 116px;
+    position: absolute;
+    top: 184px;
+    left: 0;
+}
+.clock-builder-output-seconds {
+    background-color:#0e1e31;
+    width: 144px;
+    height: 116px;
+    position: absolute;
+    top: 184px;
+    left: 152px;
+}
+/* End Countdown Timer Formatting*/
+
+
+
+
+
+a {
+    color:white;
+    text-decoration: none;
+}
+a:visted {
+    color: white;
+    text-decoration: none;
+}
+a:hover {
+    color:white;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+/* font-awesome effects */
+
+.fa-sign-in {
+    color:white;
+    transition: color ease-out .4s;
+}
+a:hover .fa-sign-in {
+    transition: color 0.4s ease;
+    color: #034368;
+    text-shadow: 0 0 5px white;
+}
+.fa-youtube-play {
+    color:white;
+    transition: color ease-out .4s;
+}
+a:hover .fa-youtube-play {
+    transition: color 0.4s ease;
+    color: #034368;
+    text-shadow: 0 0 5px white;
+}
+.fa-user {
+    color:white;
+    transition: color ease-out .4s;
+}
+a:hover .fa-user {
+    transition: color 0.4s ease;
+    color: #034368;
+    text-shadow: 0 0 5px white;
+}
+.fa-facebook {
+    color:white;
+    transition: color ease-out .4s;
+}
+a:hover .fa-facebook {
+    transition: color 0.4s ease;
+    color: #0e1e31;
+    text-shadow: 0 0 5px white;
+}
+.fa-envelope-o {
+    color:white;
+    transition: color ease-out .4s;
+}
+a:hover .fa-envelope-o {
+    transition: color 0.4s ease;
+    color: #0e1e31;
+    text-shadow: 0 0 5px white;
+}
+.fa-linkedin {
+    color:white;
+    transition: color ease-out .4s;
+}
+a:hover .fa-linkedin {
+    transition: color 0.4s ease;
+    color: #034368;
+    text-shadow: 0 0 5px white;
+}
+.fa-road {
+    color:white;
+    transition: color ease-out .4s;
+}
+a:hover .fa-road {
+    transition: color 0.4s ease;
+    color: #0e1e31;
+    text-shadow: 0 0 5px white;
+}
+.fa-laptop {
+    color:white;
+    transition: color ease-out .4s;
+}
+a:hover .fa-laptop {
+    transition: color 0.4s ease;
+    color: #034368;
+    text-shadow: 0 0 5px white;
+}
+.fa-graduation-cap {
+    color:white;
+    transition: color ease-out .4s;
+}
+a:hover .fa-graduation-cap {
+    transition: color 0.4s ease;
+    color: #0e1e31;
+    text-shadow: 0 0 5px white;
+}
+.fa-calendar {
+    color:white;
+    transition: color ease-out .4s;
+}
+a:hover .fa-calendar {
+    transition: color 0.4s ease;
+    color: #717a7d;
+    text-shadow: 0 0 5px white;
+}
+
+/* end of font-awesome effects */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media all and (max-width: 1545px) {
+
+.mainContainer{
+    font-size: 1.5em;
+}
+.one {
+    width: 117px;
+    height: 117px;
+    top: 6px;
+    left:-612px;
+}
+
+.two {
+    width: 117px;
+    height: 117px;
+    top:6px;
+    left: -489px;
+}
+.three {
+    width: 117px;
+    height: 117px;
+    top:129px;
+    left:-612px;
+}
+.four {
+    width: 240px;
+    height: 240px;
+    top:6px;
+    left:-612px;
+}
+.five {
+    width: 972px;
+    height: 240px;
+    top: 6px;
+    left:-366px;
+}
+.six {
+    width: 240px;
+    height: 117px;
+    top: 255px;
+    left:-612px;
+}
+.sixb {
+    width: 240px;
+    height: 117px;
+    top: 378px;
+    left:-612px;
+}
+.seven {
+    width: 480px;
+    height: 240px;
+    top: 255px;
+    left:-366px;
+}
+.eight {
+    width: 240px;
+    height: 240px;
+    top: 255px;
+    left: 120px;
+}
+.ninea {
+    width: 117px;
+    height: 117px;
+    top: 255px;
+    left: 366px;
+}
+.nineb {
+    width: 117px;
+    height: 117px;
+    top: 255px;
+    left: 489px;
+}
+.ninec {
+    width: 117px;
+    height: 117px;
+    top: 378px;
+    left: 366px;
+}
+.nined {
+    width: 117px;
+    height: 117px;
+    top: 378px;
+    left: 489px;
+}
+.ten {
+    width: 240px;
+    height: 117px;
+    top: 502px;
+    left:-612px;
+}
+.tenb {
+    width: 240px;
+    height: 117px;
+    top: 625px;
+    left:-612px;
+}
+.eleven {
+    width: 240px;
+    height: 240px;
+    top: 502px;
+    left: -366px;
+}
+.twelve {
+    width: 240px;
+    height: 240px;
+    top: 502px;
+    left: -126px;
+}
+.thirteen {
+    width: 120px;
+    height: 117px;
+    top: 502px;
+    left: 120px;
+}
+.thirteenb {
+    width: 120px;
+    height: 117px;
+    top: 625px;
+    left: 120px;
+}
+.fourteen {
+    width: 360px;
+    height: 240px;
+    top: 502px;
+    left: 246px;
+}
+.fifteen {
+    width: 240px;
+    height: 117px;
+    top: 748px;
+    left:-612px;
+}
+.fifteenb {
+    width: 240px;
+    height: 117px;
+    top: 871px;
+    left:-612px;
+}
+.sixteen {
+    width: 480px;
+    height: 240px;
+    top: 748px;
+    left:-366px;
+}
+.sixteena {
+    width: 117px;
+    height: 117px;
+    top: 871px;
+    left:-366px;
+}
+.sixteenb {
+    width: 117px;
+    height: 117px;
+    top: 748px;
+    left:-246px;
+}
+.sixteenc {
+    width: 117px;
+    height: 117px;
+    top: 871px;
+    left:-126px;
+}
+.sixteend {
+    width: 117px;
+    height: 117px;
+    top: 748px;
+    left: -3px;
+}
+.seventeen {
+    width: 486px;
+    height: 240px;
+    top: 748px;
+    left: 120px;
+}
+.eighteen {
+    width: 240px;
+    height: 240px;
+    top: 994px;
+    left:-612px;
+}
+.nineteen {
+    width: 240px;
+    height: 240px;
+    top: 960px;
+    left:-366px;
+}
+.twenty {
+    width: 480px;
+    height: 240px;
+    top: 994px;
+    left:-120px;
+    margin-bottom: 8px;
+}
+.twentyone {
+    width: 117px;
+    height: 117px;
+    top: 994px;
+    left: 366px;
+}
+.twentytwo {
+    width: 117px;
+    height: 117px;
+    top: 994px;
+    left: 489px;
+}
+.twentythree {;
+    width: 117px;
+    height: 117px;
+    top: 1117px;
+    left: 366px;
+}
+.twentyfour {
+    width: 117px;
+    height: 117px;
+    top: 1117px;
+    left: 489px;
+}
+.centerLarge {
+    height: 240px;
+}
+.centerSmall {
+    height: 117px;
+}
+.text p {
+    font-size: 2em
+}
+
+.small p{
+    font-size: 1.7em;
+}
+.five p {
+    font-size: 6em;
+}
+.weather p {
+    font-size: 3em;
+}
+.courses p {
+    font-size: 2.5em;
+}
+.eighteen p, .twelve p {
+    font-size: 2.5em;
+}
+.sliderText h2 {
+    font-size: 2.5em
+}
+.sliderText p {
+    font-size: 1em;
+    line-height: 1.1em;
+    padding: 15px 10px 10px 10px;
+}
+.sliderText h3 {
+    font-size: 1.75em;
+}
+
+/*start calendar formatting*/
+.calendarContainer {
+    width: 360px;
+}
+
+p.calendar {
+    font-size: 2.2em;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    text-decoration: underline;
+}
+p.event {
+    font-size: 2.1em;
+    padding-bottom: 20px;
+    line-height: .8em;
+}
+p.date {
+    font-size: .9em;
+}
+p.location {
+    font-size: .9em;
+}
+p.time {
+    font-size: .9em;
+}
+/*end calendar formatting*/
+
+/* Weather Formatting*/
+.ninec img {
+    height: 117px;
+}
+/* End Weather Formatting*/
+
+
+
+.clock-builder-text {
+    width: 236px;
+    height: 40px;
+}
+.eleven p span{
+    font-size: 0.5em;
+    line-height: 0.5em;
+}
+.clock-builder-text p {
+    font-size: 1.5em;
+    margin-top: 12px;
+}
+.clock-builder-output-days {
+    width: 114px;
+    height: 97px;
+    top: 40px;
+    left: 0;
+}
+.clock-builder-output-hours {
+    width: 114px;
+    height: 97px;
+    top: 40px;
+    left: 120px;
+}
+.clock-builder-output-minutes {
+    width: 114px;
+    height: 97px;
+    top: 143px;
+    left: 0;
+}
+.clock-builder-output-seconds {
+    width: 114px;
+    height: 97px;
+    top: 143px;
+    left: 120px;
+}
+.googleClassroom img{
+    height: 70px;
+}
+.lyonsLogo img {
+    height: 240px;
+}
+.ic img {
+    height: 120px;
+}
+.cteLab img{
+   height: 240px;
+}
+
+
+
+} /* End of 1200 x 1200 media*/
+
+
+
+
+
+
+
+
+
+@media all and (max-width: 1245px) {
+.mainContainer{
+    font-size: 1em;
+}
+.one {
+    width: 87px;
+    height: 87px;
+    top: 6px;
+    left:-462px;
+}
+.two {
+    width: 87px;
+    height: 87px;
+    top: 6px;
+    left: -368px;
+}
+.three {
+    width: 87px;
+    height: 87px;
+    top: 99px;
+    left:-462px;
+}
+.four {
+    width: 180px;
+    height: 180px;
+    top: 6px;
+    left:-462px;
+}
+.five {
+    width: 729px;
+    height: 180px;
+    top: 6px;
+    left:-276px;
+}
+.six {
+    width: 180px;
+    height: 87px;
+    top: 192px;
+    left:-462px;
+}
+.sixb {
+    width: 180px;
+    height: 87px;
+    top: 286px;
+    left:-462px;
+}
+.seven {
+    width: 360px;
+    height: 180px;
+    top: 192px;
+    left:-276px;
+}
+.eight {
+    width: 180px;
+    height: 180px;
+    top: 192px;
+    left: 90px;
+}
+.ninea {
+    width: 87px;
+    height: 87px;
+    top: 192px;
+    left: 273px;
+}
+.nineb {
+    width: 87px;
+    height: 87px;
+    top: 192px;
+    left: 366px;
+}
+.ninec {
+    width: 87px;
+    height: 87px;
+    top: 286px;
+    left: 273px;
+}
+.nined {
+    width: 87px;
+    height: 87px;
+    top: 286px;
+    left: 366px;
+}
+.ten {
+    width: 180px;
+    height: 87px;
+    top: 380px;
+    left:-462px;
+}
+.tenb {
+    width: 180px;
+    height: 87px;
+    top: 474px;
+    left:-462px;
+}
+.eleven {
+    width: 177px;
+    height: 180px;
+    top: 380px;
+    left: -276px;
+}
+.twelve {
+    width: 177px;
+    height: 180px;
+    top: 380px;
+    left: -93px;
+}
+.thirteen {
+    width: 87px;
+    height: 87px;
+    top: 380px;
+    left: 90px;
+}
+.thirteenb {
+    width: 87px;
+    height: 87px;
+    top: 473px;
+    left: 90px;
+}
+.fourteen {
+    width: 270px;
+    height: 180px;
+    top: 380px;
+    left: 183px;
+}
+.fifteen {
+    width: 180px;
+    height: 87px;
+    top: 568px;
+    left:-462px;
+}
+.fifteenb {
+    width: 180px;
+    height: 87px;
+    top: 662px;
+    left:-462px;
+}
+.sixteen {
+    width: 360px;
+    height: 180px;
+    top: 568px;
+    left:-276px;
+}
+.sixteena {
+    width: 87px;
+    height: 87px;
+    top: 662px;
+    left:-276px;
+}
+.sixteenb {
+    width: 87px;
+    height: 87px;
+    top: 568px;
+    left:-183px;
+}
+.sixteenc {
+    width: 87px;
+    height: 87px;
+    top: 662px;
+    left:-93px;
+}
+.sixteend {
+    width: 87px;
+    height: 87px;
+    top: 568px;
+    left: -3px;
+}
+.seventeen {
+    width: 363px;
+    height: 180px;
+    top: 568px;
+    left: 90px;
+}
+.eighteen {
+    width: 180px;
+    height: 180px;
+    top: 756px;
+    left:-462px;
+}
+.nineteen {
+    width: 180px;
+    height: 180px;
+    top: 756px;
+    left:-276px;
+}
+.twenty {
+    width: 360px;
+    height: 180px;
+    top: 756px;
+    left:-93px;
+    margin-bottom: 8px;
+}
+.twentyone {
+    width: 87px;
+    height: 87px;
+    top: 756px;
+    left: 273px;
+}
+.twentytwo {
+    width: 87px;
+    height: 87px;
+    top: 756px;
+    left: 366px;
+}
+.twentythree {;
+    width: 87px;
+    height: 87px;
+    top: 849px;
+    left: 273px;
+}
+.twentyfour {
+    width: 87px;
+    height: 87px;
+    top: 849px;
+    left: 366px;
+}
+.centerLarge {
+    height: 180px;
+}
+.centerSmall {
+    height: 87px;
+}
+.text p {
+    font-size: 1.5em
+}
+
+.small p{
+    font-size: 1.25em;
+}
+.five p {
+    font-size: 4em;
+}
+.weather p {
+    font-size: 2.2em;
+}
+.courses p {
+    font-size: 1.9em;
+}
+.eighteen p, .twelve p {
+    font-size: 2.2em;
+}
+.sliderText h2 {
+    font-size: 2em
+}
+.sliderText p {
+    font-size: .75em;
+    line-height: 1.1em;
+    padding: 10px 5px 5px 5px;
+}
+.sliderText h3 {
+    font-size: 1.5em;
+}
+
+/*start calendar formatting*/
+.calendarContainer {
+    width: 270px;
+}
+
+p.calendar {
+    font-size: 2.2em;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    text-decoration: underline;
+}
+p.event {
+    font-size: 2.2em;
+    padding-bottom: 5px;
+    line-height: 1.5em;
+}
+p.date {
+    font-size: 1em;
+}
+p.location {
+    font-size: 1em;
+}
+p.time {
+    font-size: 1em;
+}
+/*end calendar formatting*/
+
+/* Weather Formatting*/
+.ninec img {
+    height: 87px;
+}
+/* End Weather Formatting*/
+
+.clock-builder-text {
+    width: 180px;
+    height: 30px;
+}
+.eleven p span{
+    font-size: 0.5em;
+    line-height: 0.5em;
+}
+.clock-builder-text p {
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+.clock-builder-output-days {
+    width: 85.5px;
+    height: 72px;
+    top: 30px;
+    left: 0;
+}
+.clock-builder-output-hours {
+    width: 85.5px;
+    height: 72px;
+    top: 30px;
+    left: 91.5px;
+}
+.clock-builder-output-minutes {
+    width: 85.5px;
+    height: 72px;
+    top: 108px;
+    left: 0;
+}
+.clock-builder-output-seconds {
+    width: 85.5px;
+    height: 72px;
+    top: 108px;
+    left: 91.5px;
+}
+.googleClassroom img{
+    margin-top: 10px;
+    height: 50px;
+}
+.lyonsLogo img {
+    height: 180px;
+}
+.ic img {
+    height: 90px;
+}
+.cteLab img{
+   height: 180px;
+}
+
+
+} /* End of 900 x 900 media*/
+
+

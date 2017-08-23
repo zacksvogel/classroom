@@ -1,0 +1,54 @@
+.clockWordEnabled, .itis {
+    color: white;
+    text-shadow: white 0 0 5px, white 0 0 15px;
+    font-weight: 300;
+}
+
+.clockWordDisabled, .wordClock {
+    color: #000000;
+}
+.clockContainer {
+    position: relative;
+    text-align: center;
+    line-height: 30px;
+}
+.wordClock {
+    display: inline-block;
+    margin: auto;
+    font-family: monospace;
+    font-size: 18pt;
+    text-align: center;
+}
+
+
+    /* Small Devices, Tablets */
+    /* Was 768px - changed to 320px*/
+    @media only screen and (min-width : 320px) {
+        .clockContainer {
+            line-height: 14px;
+        }
+        .wordClock {
+            font-size: 9pt;
+        }
+}
+
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width : 992px) {
+        .clockContainer {
+            line-height: 18px;
+        }
+        .wordClock {
+            font-size: 11pt;
+        }
+}
+
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {
+        .clockContainer {
+            line-height: 23px;
+        }
+        .wordClock {
+            font-size: 14pt;
+        }
+}

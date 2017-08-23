@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Practice</title>
+	<script src="jquery-3.1.1.min.js"></script>
+	<style type="text/css">
+		.cool {
+			height: 250px;
+			width: 250px;
+			background-color: red;
+		}
+		.veryCool {
+			height: 250px;
+			width: 250px;
+			background-color: blue;
+		}
+	</style>
+</head>
+<body>
+	<div class="cool"></div>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.cool').click(function(){
+				$('.cool').replaceWith('<div class="veryCool"></div>');
+			});
+		});
+
+	</script>
+</body>
+</html>

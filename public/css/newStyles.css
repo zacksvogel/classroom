@@ -1,0 +1,886 @@
+body {
+    background-color: grey;
+}
+.container {
+	height: 100vh;
+}
+.row {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+.box {
+	background-color: #034368;
+	margin-top:5px;
+	margin-right:5px;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.mini-box {
+	display: flex;
+	justify-content: center;
+}
+.mini-center {
+	align-self: center;
+}
+.mini-square {
+	background-color: #690308;
+}
+.mini-rectangle {
+	background-color: #690308;
+}
+.v-center {
+	align-self: center;
+	color: white;
+	font-family: 'amaticbold';
+}
+.clear {
+	background-color: transparent;
+}
+.glow:hover {
+    transition: box-shadow 0.4s ease;
+    box-shadow: 0 0 20px white;
+}
+a {
+	color: white;
+}
+a:hover {
+	color: white;
+	text-decoration: none;
+}
+.two {
+	visibility: visible;
+}
+
+/*Row One*/
+.one a {
+	font-size: 1.4em;
+}
+.oneA {
+	background-color: #0e1e31;
+}
+.oneA a {
+	text-decoration: none;
+}
+.oneB {
+	background-color: #034368;
+}
+.oneC {
+	background-color: #034368;
+}
+.oneD {
+	background-color: #0e1e31;
+}
+.oneD a {
+	text-decoration: none;
+}
+.two {
+	background-color: #690308;
+	font-size: 3.5em;
+}
+
+/*Row Two*/
+.three {
+	font-size: 1.4em;
+}
+.three a {
+	text-decoration: none;
+}
+
+/*Row Three*/
+.seven {
+	font-size: 1.4em;
+}
+.seven a {
+	text-decoration: none;
+}
+.nine {
+	background-color: #690308;
+	font-size: 1.3em;
+}
+.nine a {
+	text-decoration: none;
+}
+.tenA {
+	background-color: #0e1e31;
+}
+.tenB {
+	background-color: #034368;
+}
+.eleven {
+	background-color: #690308;
+}
+
+/*Row Four*/
+.twelve {
+	font-size: 1.4em;
+}
+.twelve a {
+	text-decoration: none;
+}
+.thirteen {
+	background-color: #690308;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+.fourteen {
+	background-color: #690308;
+	font-size: 1.3em;
+}
+.fourteen a {
+	text-decoration: none;
+}
+.fifteen {
+	background-color: #690308;
+	font-size: 1.3em;
+}
+.fifteen a {
+	text-decoration: none;
+}
+
+/*Row Five*/
+.sixteen {
+	background-color: #690308;
+	font-size: 1.3em;
+}
+.sixteen a {
+	text-decoration: none;
+}
+.eighteen {
+	background-color: #690308;
+	font-size: 1.3em;
+}
+.eighteen a {
+	color: white;
+	text-decoration: none;
+}
+.nineteenA {
+	background-color: #0e1e31;
+	font-size: 0.9em;
+}
+.nineteenA a {
+	text-decoration: none;
+}
+.nineteenB {
+	background-color: #034368;
+	font-size: 0.9em;
+}
+.nineteenB a {
+	text-decoration: none;
+}
+.nineteenC {
+	background-color: #034368;
+	font-size: 0.9em;
+}
+.nineteenC a {
+	text-decoration: none;
+}
+.nineteenD {
+	background-color: #0e1e31;
+	font-size: 0.9em;
+}
+.nineteenD a {
+	text-decoration: none;
+}
+
+
+/* Countdown Timer Formatting*/
+.clock-builder-text {
+    width: 224px;
+}
+.clock {
+	display: flex;
+	justify-content: center;
+	padding-top:20px;
+	width: 90px;
+    height: 90px;
+}
+.eight p{
+    font-size: 4.0em; /*changes each output font size*/
+    line-height: 0.5em;
+    color: white;
+    font-family: 'amaticbold';
+}
+.eight p span{
+    font-size: 0.5em;
+    line-height: 0.5em;
+}
+.clock-builder-text p {
+    font-size: 1.8em;
+    margin-top: 10px;
+}
+.clock-builder-output-days {
+    background-color:#0e1e31;
+    margin-right: 20px;
+}
+.clock-builder-output-hours {
+    background-color:#034368;
+}
+.clock-builder-output-minutes {
+    background-color:#034368;
+    margin-right: 20px;
+    margin-top: 7px;
+}
+.clock-builder-output-seconds {
+    background-color:#0e1e31;
+    margin-top: 7px;
+}
+/* End Countdown Timer Formatting*/
+
+
+
+/* Login Formatting */
+.loginForm {
+	margin-top: 50px;
+	padding-top: 20px;
+}
+.loginText {
+	font-family: 'amaticbold';
+	font-size: 3em;
+}
+.form-control {
+	border-radius: 0;
+}
+.formMargin {
+	margin-top: 20px;
+}
+.btn {
+	font-size: 1.2em;
+	color: white;
+}
+.btn-primary {
+	border-radius: 0;
+	border-color: #690308;
+	background-color: #690308;
+	font-family: 'amaticbold';
+	font-size: 2.5em;
+}
+.btn-primary:hover {
+	background-color: #690308;
+}
+
+/* End Login Formatting */
+
+
+/* Home Formattting */
+.v-centerHome {
+	align-self: center;
+	color: white;
+	font-family: 'amaticbold';
+	font-size: 2em;
+}
+.v-centerHome span {
+	font-size: 3em;
+}
+.threeHome {
+	background-color:#034368;
+}
+.fourHome {
+	background-color:#0e1e31;
+}
+.fiveHome {
+	background-color:#034368;
+}
+.sixHome {
+	background-color:#0e1e31;
+}
+.sevenHome {
+	background-color:#034368;
+}
+.eightHome {
+	background-color: #690308;
+	color: white;
+}
+.nineHome {
+	background-color:#0e1e31;
+}
+.tenHome {
+	background-color:#0e1e31;
+}
+.elevenHome {
+	background-color: #690308;
+	color: white;
+}
+
+/* End Home Formatting */
+
+/*About me Page*/
+.aboutText {
+    background-color:#034368;
+    width: 916px;
+    height: 600px;
+}
+.textContainer {
+	width: 90%;
+}
+.aboutPicture {
+    background-color:#0e1e31;
+    width: 600px;
+    height: 600px;
+}
+.aboutPicture img{
+	margin-top: 20px;
+	height: 560px;
+}
+.siteHeader {
+	background-color: #0e1e31;
+	padding: 5px;
+}
+.site1 {
+	background-color:#034368;
+	padding: 5px;
+}
+.site2 {
+	background-color: #0e1e31;
+	padding: 5px;
+}
+.site3 {
+	background-color:#034368;
+	padding: 5px;
+}
+.site4 {
+	background-color: #0e1e31;
+	padding: 5px;
+}
+
+/*End About Me Page*/
+
+
+
+/* Custom, iPhone Retina */ 
+/*    @media only screen and (min-width : 320px) {
+
+    	.box {
+    		margin-top: 3px;
+    		margin-right: 3px;
+    	}
+    	.square {
+			width: 50px;
+			height: 50px;
+		}
+		.rectangle {
+			width: 103px;
+			height: 50px;
+		}
+		.large-rectangle {
+			width: 156px;
+			height: 50px;
+		}
+		.ex-large-rectangle {
+			width: 209px;
+			height: 50px;
+		}
+		.v-center {
+			font-size: .4em;
+		}
+		.mini-square {
+			width: 27px;
+			height: 27px;
+		}
+		.mini-rectangle {
+			width: 56px;
+			height: 27px;
+		}
+		.margin-right {
+			margin-right:3px;
+		}
+		.margin-top {
+			margin-top:3px;
+		}
+    }*/
+
+
+
+    /* Extra Small Devices, Phones */ 
+ /*   @media only screen and (min-width : 480px) {
+
+    	.box {
+    		margin-top: 4px;
+    		margin-right: 4px;
+    	}
+    	.square {
+			width: 80px;
+			height: 80px;
+		}
+		.skinny-square {
+			width: 40px;
+			height: 80px;
+		}
+		.small-rectangle {
+			width: 120px;
+			height: 80px;
+		}
+		.rectangle {
+			width: 164px;
+			height: 80px;
+		}
+		.large-rectangle {
+			width: 248px;
+			height: 80px;
+		}
+		.ex-large-rectangle {
+			width: 332px;
+			height: 80px;
+		}
+		.v-center {
+			font-size: .8em;
+		}
+		.mini-square {
+			width: 38px;
+			height: 38px;
+		}
+		.mini-rectangle {
+			width: 80px;
+			height: 38px;
+		}
+		.margin-right {
+			margin-right:4px;
+		}
+		.margin-top {
+			margin-top:4px;
+		}
+    }*/
+
+
+
+    /* Small Devices, Tablets */
+    /* Was 768px - changed to 320px*/
+    @media only screen and (min-width : 320px) {
+    	
+    	.box {
+    		margin-top: 4px;
+    		margin-right: 4px;
+    	}
+    	.square {
+			width: 140px;
+			height: 140px;
+		}
+		.skinny-square {
+			width: 70px;
+			height: 140px;
+		}
+		.small-rectangle {
+			width: 210px;
+			height: 140px;
+		}
+		.rectangle {
+			width: 284px;
+			height: 140px;
+		}
+		.large-rectangle {
+			width: 428px;
+			height: 140px;
+		}
+		.ex-large-rectangle {
+			width: 572px;
+			height: 140px;
+		}
+		.large-rectangleHome {
+			width: 428px;
+		}
+		.ex-large-rectangleHome {
+			width: 572px;
+		}
+		.v-center {
+			font-size: 1.2em;
+		}
+		.mini-square {
+			width: 68px;
+			height: 68px;
+		}
+		.mini-rectangle {
+			width: 140px;
+			height: 68px;
+		}
+		.margin-right {
+			margin-right:4px;
+		}
+		.margin-top {
+			margin-top:4px;
+		}
+		.tenB img {
+			margin-top: -5px;
+    		height: 70px;
+		}
+		/* weather formatting*/
+		.weather {
+			font-size: 1.3em;
+		}
+		.weatherPadding {
+			padding-top: 5px;
+		}
+		/*end weather formatting*/
+
+		/* Countdown Timer Formatting*/
+		.clock-builder-text {
+		    width: 224px;
+		}
+		.clock {
+			padding-top:10px;
+			width: 53px;
+		    height: 53px;
+		}
+		.eight p{
+		    font-size: 2.3em; /*changes each output font size*/
+		    line-height: 0.5em;
+		}
+		.eight p span{
+		    font-size: 0.5em;
+		    line-height: 0.5em;
+		}
+		.clock-builder-text p {
+		    font-size: 1.3em;
+		    margin-top: 10px;
+		}
+		.clock-builder-output-days {
+		    margin-right: 15px;
+		}
+		.clock-builder-output-minutes {
+		    margin-right: 15px;
+		    margin-top: 3px;
+		}
+		.clock-builder-output-seconds {
+		    margin-top: 3px;
+		}
+		/* End Countdown Timer Formatting*/
+
+		/* Calender Formatting */
+		.calendar1 {
+			font-size: 2.5em;
+			padding-top: 40px;
+			color:white;
+			font-family: 'amaticbold';
+		}
+		.event {
+			padding-top: 25px;
+			color: white;
+			font-size: 1.8em;
+			font-family: 'amaticbold';
+		}
+		.dateTime {
+			color: white;
+			font-size: 1.2em;
+		}
+		/* End Calender Formatting */
+
+		/* Daily Formatting */
+		.dailyCenter {
+			align-self: center;
+			padding: 5px;
+		}
+		.daily {
+			color: white;
+			font-size: .9em;
+		}
+		.quote {
+			color: white;
+		}
+		.quotePerson {
+			color: white;
+			font-size: 2em;
+			font-family: 'amaticbold';
+		}
+
+		/* End Daily Formatting */
+
+		/* Home Formattting */
+		.v-centerHome {
+			font-size: 2em;
+		}
+		.v-centerHome span {
+			font-size: 2em;
+		}
+		.eightHome {
+			font-size: 1.0em;
+		}
+		.elevenHome {
+			font-size: 1.0em;
+		}
+		/* End Home Formatting */
+
+
+    }
+
+
+
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width : 992px) {
+
+    	.box {
+    		margin-top: 5px;
+    		margin-right: 5px;
+    	}
+    	.square {
+			width: 180px;
+			height: 180px;
+		}
+		.skinny-square {
+			width: 90px;
+			height: 180px;
+		}
+		.small-rectangle {
+			width: 270px;
+			height: 180px;
+		}
+		.rectangle {
+			width: 365px;
+			height: 180px;
+		}
+		.large-rectangle {
+			width: 550px;
+			height: 180px;
+		}
+		.ex-large-rectangle {
+			width: 735px;
+			height: 180px;
+		}
+		.large-rectangleHome {
+			width: 550px;
+		}
+		.ex-large-rectangleHome {
+			width: 735px;
+		}
+		.v-center {
+			font-size: 1.5em;
+		}
+		.mini-square {
+			width: 87.5px;
+			height: 87.5px;
+		}
+		.mini-rectangle {
+			width: 180px;
+			height: 87.5px;
+		}
+		.margin-right {
+			margin-right:5px;
+		}
+		.margin-top {
+			margin-top:5px;
+		}
+		.tenB img {
+			margin-top: -5px;
+    		height: 90px;
+		}
+		/* weather formatting*/
+		.weather {
+			font-size: 1.4em;
+		}
+		.weatherPadding {
+			padding-top: 5px;
+		}
+		/*end weather formatting*/
+		/* Countdown Timer Formatting*/
+		.clock-builder-text {
+		    width: 224px;
+		}
+		.clock {
+			padding-top:15px;
+			width: 70px;
+		    height: 70px;
+		}
+		.eight p{
+		    font-size: 3.0em; /*changes each output font size*/
+		    line-height: 0.5em;
+		}
+		.eight p span{
+		    font-size: 0.5em;
+		    line-height: 0.5em;
+		}
+		.clock-builder-text p {
+		    font-size: 1.6em;
+		    margin-top: 10px;
+		}
+		.clock-builder-output-days {
+		    margin-right: 20px;
+		}
+		.clock-builder-output-minutes {
+		    margin-right: 20px;
+		    margin-top: 7px;
+		}
+		.clock-builder-output-seconds {
+		    margin-top: 7px;
+		}
+		/* End Countdown Timer Formatting*/
+
+		/* Calender Formatting */
+		.calendar1 {
+			font-size: 3.5em;
+			padding-top: 50px;
+		}
+		.event {
+			padding-top: 35px;
+			font-size: 2.5em;
+		}
+		.dateTime {
+			font-size: 1.6em;
+		}
+
+		/* End Calender Formatting */
+
+		/* Daily Formatting */
+		.daily {
+			font-size: 1.1em;
+		}
+		.quote {
+			font-size: 1.2em;
+		}
+		.quotePerson {
+			font-size: 2.5em;
+		}
+
+		/* End Daily Formatting */
+
+		/* Home Formattting */
+		.v-centerHome {
+			font-size: 2em;
+		}
+		.v-centerHome span {
+			font-size: 3em;
+		}
+		.eightHome {
+			font-size: 1.2em;
+		}
+		.elevenHome {
+			font-size: 1.2em;
+		}
+		/* End Home Formatting */
+    }
+
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {
+
+    	.box {
+    		margin-top: 5px;
+    		margin-right: 5px;
+    	}
+    	.square {
+			width: 224px;
+			height: 224px;
+		}
+		.skinny-square {
+			width: 112px;
+			height: 224px;
+		}
+		.small-rectangle {
+			width: 336px;
+			height: 224px;
+		}
+		.rectangle {
+			width: 453px;
+			height: 224px;
+		}
+		.large-rectangle {
+			width: 682px;
+			height: 224px;
+		}
+		.ex-large-rectangle {
+			width: 911px;
+			height: 224px;
+		}
+		.large-rectangleHome {
+			width: 682px;
+		}
+		.ex-large-rectangleHome {
+			width: 911px;
+		}
+		.v-center {
+			font-size: 2em;
+		}
+		.mini-square {
+			width: 109.5px;
+			height: 109.5px;
+		}
+		.mini-rectangle {
+			width: 224px;
+			height: 109.5px;
+		}
+		.margin-right {
+			margin-right:5px;
+		}
+		.margin-top {
+			margin-top:5px;
+		}
+		.tenB img {
+			margin-top: -10px;
+    		height: 120px;
+		}
+		/* Countdown Timer Formatting*/
+		.clock-builder-text {
+		    width: 224px;
+		}
+		.clock {
+			padding-top:20px;
+			width: 90px;
+		    height: 90px;
+		}
+		.eight p{
+		    font-size: 4.0em; /*changes each output font size*/
+		    line-height: 0.5em;
+		}
+		.eight p span{
+		    font-size: 0.5em;
+		    line-height: 0.5em;
+		}
+		.clock-builder-text p {
+		    font-size: 1.8em;
+		    margin-top: 10px;
+		}
+		.clock-builder-output-days {
+		    margin-right: 20px;
+		}
+		.clock-builder-output-minutes {
+		    margin-right: 20px;
+		    margin-top: 7px;
+		}
+		.clock-builder-output-seconds {
+		    margin-top: 7px;
+		}
+		/* End Countdown Timer Formatting*/
+
+		/* Calender Formatting */
+		.calendar1 {
+			font-size: 4.5em;
+			padding-top: 55px;
+		}
+		.event {
+			padding-top: 35px;
+			font-size: 3.2em;
+		}
+		.dateTime {
+			font-size: 2.0em;
+		}
+
+		/* End Calender Formatting */
+
+		/* Daily Formatting */
+		.daily {
+			font-size: 1.3em;
+		}
+		.quote {
+			font-size: 1.5em;
+		}
+		.quotePerson {
+			font-size: 3em;
+		}
+
+		/* End Daily Formatting */
+
+		/* Home Formattting */
+		.v-centerHome {
+			font-size: 2em;
+		}
+		.v-centerHome span {
+			font-size: 3em;
+		}
+		.eightHome {
+			font-size: 1.5em;
+		}
+		.elevenHome {
+			font-size: 1.5em;
+		}
+		/* End Home Formatting */
+    }
+

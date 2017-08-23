@@ -1,0 +1,416 @@
+body {
+    background-color: white;
+}
+
+.box {
+    text-align:center;
+    color: white;
+}
+.three {
+    background-color:#034368;
+    width: 300px;
+    height: 146px;
+    position: absolute;
+    top:316px;
+    left:-766px;
+}
+.four {
+    background-color:#0e1e31;
+    width: 300px;
+    height: 146px;
+    position: absolute;
+    top:470px;
+    left:-766px;
+}
+.five {
+    background-color:#034368;
+    width: 300px;
+    height: 146px;
+    position: absolute;
+    top:624px;
+    left:-766px;
+}
+.six {
+    background-color:#0e1e31;
+    width: 300px;
+    height: 146px;
+    position: absolute;
+    top:778px;
+    left:-766px;
+}
+.seven {
+    background-color:#034368;
+    width: 300px;
+    height: 146px;
+    position: absolute;
+    top:932px;
+    left:-766px;
+}
+.eight {
+    background-color:#0e1e31;
+    width: 300px;
+    height: 146px;
+    position: absolute;
+    top:1086px;
+    left:-766px;
+}
+.nine {
+    background-color:#034368;
+    width: 300px;
+    height: 146px;
+    position: absolute;
+    top:1240px;
+    left:-766px;
+}
+.ten {
+    background-color:#0e1e31;
+    width: 300px;
+    height: 146px;
+    position: absolute;
+    top:1394px;
+    left:-766px;
+}
+.eleven {
+    background-color:#034368;
+    width: 300px;
+    height: 146px;
+    position: absolute;
+    top:1548px;
+    left:-766px;
+}
+.twelve {
+    background-color:#0e1e31;
+    width: 300px;
+    height: 146px;
+    position: absolute;
+    top:316px;
+    left:458px;
+}
+.thirteen {
+    background-color:#034368;
+    width: 300px;
+    height: 146px;
+    position: absolute;
+    top:470px;
+    left:458px;
+}
+.fourteen {
+    background-color:#0e1e31;
+    width: 300px;
+    height: 146px;
+    position: absolute;
+    top:624px;
+    left:458px;
+}
+.fifteen {
+    background-color:#034368;
+    width: 300px;
+    height: 146px;
+    position: absolute;
+    top:778px;
+    left:458px;
+}
+.sixteen {
+    background-color:#0e1e31;
+    width: 300px;
+    height: 146px;
+    position: absolute;
+    top:932px;
+    left:458px;
+}
+.seventeen {
+    background-color:#034368;
+    width: 300px;
+    height: 146px;
+    position: absolute;
+    top:1086px;
+    left:458px;
+}
+.eighteen {
+	background-color:#0e1e31;
+    width: 300px;
+    height: 146px;
+    position: absolute;
+    top:1240px;
+    left:458px;
+}
+.nineteen {
+    background-color:#034368;
+    width: 300px;
+    height: 146px;
+    position: absolute;
+    top:1394px;
+    left:458px;
+}
+.centerSmall {
+    all: initial;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 170px;
+}
+.text p {
+    color:white;
+    text-align: center;
+    font-family: 'amaticbold';
+    font-size: 2.5em
+}
+.text .fa {
+	color:white;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.picture {
+    position: absolute;
+    top:280px;
+    left:-455px;
+}
+.picture img {
+	width: 900px;
+}
+
+@media all and (max-width: 1545px) {
+	.three {
+	    width: 240px;
+	    height: 117px;
+	    top:252px;
+	    left:-612px;
+	}
+	.four {
+	    width: 240px;
+	    height: 117px;
+	    top:375px;
+	    left:-612px;
+	}
+	.five {
+	    width: 240px;
+	    height: 117px;
+	    top:498px;
+	    left:-612px;
+	}
+	.six {
+	    width: 240px;
+	    height: 117px;
+	    top:621px;
+	    left:-612px;
+	}
+	.seven {
+	    width: 240px;
+	    height: 117px;
+	    top:744px;
+	    left:-612px;
+	}
+	.eight {
+	    width: 240px;
+	    height: 117px;
+	    top:867px;
+	    left:-612px;
+	}
+	.nine {
+	    width: 240px;
+	    height: 117px;
+	    top:990px;
+	    left:-612px;
+	}
+	.ten {
+	    width: 240px;
+	    height: 117px;
+	    top:1113px;
+	    left:-612px;
+	}
+	.eleven {
+	    width: 240px;
+	    height: 117px;
+	    top:1236px;
+	    left:-612px;
+	}
+	.twelve {
+	    width: 240px;
+	    height: 117px;
+	    top:252px;
+	    left:366px;
+	}
+	.thirteen {
+	    width: 240px;
+	    height: 117px;
+	    top:375px;
+	    left:366px;
+	}
+	.fourteen {
+	    width: 240px;
+	    height: 117px;
+	    top:498px;
+	    left:366px;
+	}
+	.fifteen {
+	    width: 240px;
+	    height: 117px;
+	    top:621px;
+	    left:366px;
+	}
+	.sixteen {
+	    width: 240px;
+	    height: 117px;
+	    top:744px;
+	    left:366px;
+	}
+	.seventeen {
+	    width: 240px;
+	    height: 117px;
+	    top:867px;
+	    left:366px;
+	}
+	.eighteen {
+	    width: 240px;
+	    height: 117px;
+	    top:990px;
+	    left:366px;
+	}
+	.nineteen {
+	    width: 240px;
+	    height: 117px;
+	    top:1113px;
+	    left:366px;
+	}
+	.centerSmall {
+	    height: 146px;
+	}
+	.text p {
+	    font-size: 2.0em
+	}
+	.text .fa {
+	    font-size: 2.0em;
+	}
+
+	.picture {
+	    top:280px;
+	    left:-365px;
+	}
+	.picture img {
+		width: 720px;
+	}
+}
+
+@media all and (max-width: 1245px) {
+	.three {
+	    width: 180px;
+	    height: 87px;
+	    top:192px;
+	    left:-462px;
+	}
+	.four {
+	    width: 180px;
+	    height: 87px;
+	    top:285px;
+	    left:-462px;
+	}
+	.five {
+	    width: 180px;
+	    height: 87px;
+	    top:378px;
+	    left:-462px;
+	}
+	.six {
+	    width: 180px;
+	    height: 87px;
+	    top:471px;
+	    left:-462px;
+	}
+	.seven {
+	    width: 180px;
+	    height: 87px;
+	    top:564px;
+	    left:-462px;
+	}
+	.eight {
+	    width: 180px;
+	    height: 87px;
+	    top:657px;
+	    left:-462px;
+	}
+	.nine {
+	    width: 180px;
+	    height: 87px;
+	    top:750px;
+	    left:-462px;
+	}
+	.ten {
+	    width: 180px;
+	    height: 87px;
+	    top:843px;
+	    left:-462px;
+	}
+	.eleven {
+	    width: 180px;
+	    height: 87px;
+	    top:936px;
+	    left:-462px;
+	}
+	.twelve {
+	    width: 180px;
+	    height: 87px;
+	    top:192px;
+	    left:272px;
+	}
+	.thirteen {
+	    width: 180px;
+	    height: 87px;
+	    top:285px;
+	    left:272px;
+	}
+	.fourteen {
+	    width: 180px;
+	    height: 87px;
+	    top:378px;
+	    left:272px;
+	}
+	.fifteen {
+	    width: 180px;
+	    height: 87px;
+	    top:471px;
+	    left:272px;
+	}
+	.sixteen {
+	    width: 180px;
+	    height: 87px;
+	    top:564px;
+	    left:272px;
+	}
+	.seventeen {
+	    width: 180px;
+	    height: 87px;
+	    top:657px;
+	    left:272px;
+	}
+	.eighteen {
+	    width: 180px;
+	    height: 87px;
+	    top:750px;
+	    left:272px;
+	}
+	.nineteen {
+	    width: 180px;
+	    height: 87px;
+	    top:843px;
+	    left:272px;
+	}
+	.centerSmall {
+	    height: 105px;
+	}
+	.text p {
+	    font-size: 1.5em
+	}
+	.text .fa {
+	    font-size: 1.5em;
+	}
+
+	.picture {
+	    top:280px;
+	    left:-275px;
+	}
+	.picture img {
+		width: 540px;
+	}
+
+}

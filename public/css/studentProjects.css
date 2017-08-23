@@ -1,0 +1,275 @@
+body {
+    background-color:#717a7d;
+}
+.center {
+	all: initial;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 450px;
+    color: white;
+}
+.text {
+    text-align: center;
+}
+.text h1 {
+    font-family: 'amaticbold';
+    font-size: 3em;
+}
+.text p {
+    font-family: helvetica;
+    font-size: 1em;
+}
+.text h4 {
+    font-family: helvetica;
+    font-size: 1.5em;
+}
+.boxSetup {
+	width: 502px;
+    height: 500px;
+    position: absolute;
+}
+.three {
+    background-color:#0e1e31;
+    top: 316px;
+    left: -766px;
+}
+.four {
+	background-color:#0e1e31;
+    top: 316px;
+    left: -255px;
+}
+.five {
+	background-color:#0e1e31;
+    top: 316px;
+    left: 255px;
+}
+.six {
+	background-color:#0e1e31;
+    top: 824px;
+    left: -766px;
+}
+.seven {
+	background-color:#0e1e31;
+    top: 824px;
+    left: -255px;
+}
+.eight {
+	background-color:#0e1e31;
+    top: 824px;
+    left: 255px;
+}
+.nine {
+	background-color:#0e1e31;
+    top: 1332px;
+    left: -766px;
+}
+.ten {
+	background-color:#0e1e31;
+    top: 1332px;
+    left: -255px;
+}
+.eleven {
+	background-color:#0e1e31;
+    top: 1332px;
+    left: 255px;
+}
+.twelve {
+	background-color:#0e1e31;
+    top: 1840px;
+    left: -766px;
+}
+.thirteen {
+	background-color:#0e1e31;
+    top: 1840px;
+    left: -255px;
+}
+.fourteen {
+	background-color:#0e1e31;
+    top: 1840px;
+    left: 255px;
+}
+
+@media all and (max-width: 1545px) {
+	.center {
+		all: initial;
+	    display: flex;
+	    justify-content: center;
+	    flex-direction: column;
+	    height: 350px;
+	    color: white;
+	}
+	.text {
+	    text-align: center;
+	}
+	.text h1 {
+	    font-size: 2.5em;
+	}
+	.text p {
+	    font-size: 0.9em;
+	}
+	.text h4 {
+	   font-size: 1.4em;
+	}
+	.boxSetup {
+		width: 402px;
+	    height: 400px;
+	    position: absolute;
+	}
+	.three {
+	    background-color:#0e1e31;
+	    top: 252px;
+	    left: -612px;
+	}
+	.four {
+		background-color:#0e1e31;
+	    top: 252px;
+	    left: -204px;
+	}
+	.five {
+		background-color:#0e1e31;
+	    top: 252px;
+	    left: 204px;
+	}
+	.six {
+		background-color:#0e1e31;
+	    top: 658px;
+	    left: -612px;
+	}
+	.seven {
+		background-color:#0e1e31;
+	    top: 658px;
+	    left: -204px;
+	}
+	.eight {
+		background-color:#0e1e31;
+	    top: 658px;
+	    left: 204px;
+	}
+	.nine {
+		background-color:#0e1e31;
+	    top: 1064px;
+	    left: -612px;
+	}
+	.ten {
+		background-color:#0e1e31;
+	    top: 1064px;
+	    left: -204px;
+	}
+	.eleven {
+		background-color:#0e1e31;
+	    top: 1064px;
+	    left: 204px;
+	}
+	.twelve {
+		background-color:#0e1e31;
+	    top: 1470px;
+	    left: -612px;
+	}
+	.thirteen {
+		background-color:#0e1e31;
+	    top: 1470px;
+	    left: -204px;
+	}
+	.fourteen {
+		background-color:#0e1e31;
+	    top: 1470px;
+	    left: 204px;
+	}
+
+}
+
+
+
+
+
+@media all and (max-width: 1275px) { 
+	.center {
+		all: initial;
+	    display: flex;
+	    justify-content: center;
+	    flex-direction: column;
+	    height: 275px;
+	    color: white;
+	}
+	.text {
+	    text-align: center;
+	}
+	.text h1 {
+	    font-size: 2.0em;
+	}
+	.text p {
+	    font-size: 0.7em;
+	}
+	.text h4 {
+		font-size: 1.2em;
+	}
+	.boxSetup {
+		width: 300px;
+	    height: 300px;
+	    position: absolute;
+	}
+	.three {
+	    background-color:#0e1e31;
+	    top: 192px;
+	    left: -462px;
+	}
+	.four {
+		background-color:#0e1e31;
+	    top: 192px;
+	    left: -156px;
+	}
+	.five {
+		background-color:#0e1e31;
+	    top: 192px;
+	    left: 152px;
+	}
+	.six {
+		background-color:#0e1e31;
+	    top: 498px;
+	    left: -462px;
+	}
+	.seven {
+		background-color:#0e1e31;
+	    top: 498px;
+	    left: -156px;
+	}
+	.eight {
+		background-color:#0e1e31;
+	    top: 498px;
+	    left: 152px;
+	}
+	.nine {
+		background-color:#0e1e31;
+	    top: 804px;
+	    left: -462px;
+	}
+	.ten {
+		background-color:#0e1e31;
+	    top: 804px;
+	    left: -156px;
+	}
+	.eleven {
+		background-color:#0e1e31;
+	    top: 804px;
+	    left: 152px;
+	}
+	.twelve {
+		background-color:#0e1e31;
+	    top: 1110px;
+	    left: -462px;
+	}
+	.thirteen {
+		background-color:#0e1e31;
+	    top: 1110px;
+	    left: -156px;
+	}
+	.fourteen {
+		background-color:#0e1e31;
+	    top: 1110px;
+	    left: 152px;
+	}
+
+
+
+}

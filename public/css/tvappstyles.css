@@ -1,0 +1,376 @@
+body {
+    background-color:#717a7d;
+    overflow: hidden;
+}
+.container2{
+    position: absolute;
+    left: 50%;
+    height: 50%;
+    font-family: 'amaticbold';
+    font-size: 2em;
+}
+.box {
+    text-align:center;
+    color: white;
+}
+
+.onea {
+    width: 146px;
+    height: 146px;
+    background-color:#0e1e31;
+    position: absolute;
+    top: 8px;
+    left:-920px;
+}
+.oneb {
+    width: 146px;
+    height: 146px;
+    background-color:#034368;
+    position: absolute;
+    top: 8px;
+    left:-766px;
+}
+.onec {
+    width: 146px;
+    height: 146px;
+    background-color:#034368;
+    position: absolute;
+    top: 162px;
+    left:-920px;
+}
+.oned {
+    width: 146px;
+    height: 146px;
+    background-color:#0e1e31;
+    position: absolute;
+    top: 162px;
+    left:-766px;
+}
+.two {
+    width: 300px;
+    height: 300px;
+    background-color:#690308;
+    position: absolute;
+    top:8px;
+    left: -612px;
+}
+.three {
+    background-color:#690308;
+    width: 608px;
+    height: 600px;
+    position: absolute;
+    top:162px;
+    left:-304px;
+}
+.four {
+    background-color:#690308;
+    width: 608px;
+    height: 600px;
+    position: absolute;
+    top:8px;
+    left:312px;
+}
+.five {
+    background-color:#690308;
+    width: 608px;
+    height: 600px;
+    position: absolute;
+    top: 316px;
+    left:-920px;
+}
+.six {
+    background-color:#690308;
+    width: 608px;
+    height: 300px;
+    position: absolute;
+    top: 770px;
+    left:-304px;
+}
+.seven {
+	background-color:#690308;
+	width: 300px;
+	height: 300px;
+	position: absolute;
+    top: 770px;
+    left:312px;
+}
+.eight {
+	background-color:#690308;
+	width: 300px;
+	height: 300px;
+	position: absolute;
+    top: 770px;
+    left: 620px;
+}
+.smallbox {
+    width: 146px;
+    height: 146px;
+    position: absolute;
+}
+.nine {
+    background-color:#0e1e31;
+    top: 924px;
+    left: -920px;
+}
+.ten {
+    background-color:#034368;
+    top: 924px;
+    left: -766px;
+}
+.eleven {
+    background-color:#0e1e31;
+    top: 924px;
+    left: -612px;
+}
+.twelve {
+    background-color:#034368;
+    top: 924px;
+    left: -458px;
+}
+.thirteen {
+    background-color:#0e1e31;
+    top: 8px;
+    left: -304px;
+}
+.fourteen {
+    background-color:#034368;
+    top: 8px;
+    left: -150px;
+}
+.fifteen {
+    background-color:#0e1e31;
+    top: 8px;
+    left: 4px;
+}
+.sixteen {
+    background-color:#034368;
+    top: 8px;
+    left: 158px;
+}
+.seventeen {
+    background-color:#0e1e31;
+    top: 616px;
+    left: 312px;
+}
+.eighteen {
+    background-color:#034368;
+    top: 616px;
+    left: 466px;
+}
+.nineteen {
+    background-color:#0e1e31;
+    top: 616px;
+    left: 620px;
+}
+.twenty {
+    background-color:#034368;
+    top: 616px;
+    left: 774px;
+}
+.onea p{
+    margin-top: 40px;
+    font-size: 1.6em;
+}
+.oneb p{
+    margin-top: 40px;
+    font-size: 1.6em;
+}
+.onec p{
+    margin-top: 30px;
+    font-size: 2em;
+}
+.oned p{
+    margin-top: 30px;
+    font-size: 2em;
+}
+.six p {
+    font-size: 2em;
+}
+.name{
+    font-size: 1.5em;
+}
+.day{
+    font-size: 0.7em;
+}
+.fa-birthday-cake {
+    padding-top: 20px;
+    padding-right: 50px;
+    padding-bottom: 10px;
+    font-size: 2em;
+}
+/* Countdown Timer Formatting*/
+
+.eight p{
+    font-size: 2.5em;
+    margin-top: 25px;
+    line-height: 0.4em;
+}
+.eight p span{
+    font-size: 0.5em;
+    line-height: 0.5em;
+}
+.clock-builder-text p {
+    font-size: 1.4em;
+    margin-top: 18px;
+}
+.clock-builder-output-days {
+    background-color:#0e1e31;
+    width: 146px;
+    height: 116px;
+    position: absolute;
+    top: 60px;
+    left: 0;
+}
+.clock-builder-output-hours {
+    background-color:#034368;
+    width: 146px;
+    height: 116px;
+    position: absolute;
+    top: 60px;
+    left: 154px;
+}
+
+.clock-builder-output-minutes {
+    background-color:#034368;
+    width: 146px;
+    height: 116px;
+    position: absolute;
+    top: 184px;
+    left: 0;
+}
+.clock-builder-output-seconds {
+    background-color:#0e1e31;
+    width: 146px;
+    height: 116px;
+    position: absolute;
+    top: 184px;
+    left: 154px;
+}
+/* End Countdown Timer Formatting*/
+
+.lyonsLogo img{
+    height: 300px;
+    margin-left: -25px;
+}
+
+
+/*Animation*/
+.seventeen {
+    animation-duration: 3s;
+    animation-delay: 3s;
+}
+.fifteen {
+    animation-duration: 3s;
+    animation-delay: 33s;
+}
+.nine {
+    animation-duration: 3s;
+    animation-delay: 63s;
+}
+.thirteen {
+    animation-duration: 3s;
+    animation-delay: 93s;
+}
+.twelve {
+    animation-duration: 3s;
+    animation-delay: 123s;
+}
+.twenty {
+    animation-duration: 3s;
+    animation-delay: 153s;
+}
+.sixteen {
+    animation-duration: 3s;
+    animation-delay: 183s;
+}
+.eleven {
+    animation-duration: 3s;
+    animation-delay: 213s;
+}
+.eighteen {
+    animation-duration: 3s;
+    animation-delay: 243s;
+}
+.fourteen {
+    animation-duration: 3s;
+    animation-delay: 273s;
+}
+
+@keyframes logo {
+    from {top: 8px;
+        left: -612px;}
+    to {top: 770px;
+        left:312px;
+    transform: scaleX(-1);
+        filter: FlipH;}
+}
+.two {
+    animation: logo 3s ease-in-out forwards;
+    animation-delay: 48s;
+}
+@keyframes blank {
+    0% {top: 770px;
+        left:312px;}
+    100% {top: 8px;
+        left: -612px;}
+}
+.seven {
+    animation: blank 3s ease-in-out forwards;
+    animation-delay: 48s;
+}
+
+
+
+@keyframes weather {
+    from {  top: 316px;
+            left:-920px;}
+    to {    top:8px;
+            left:312px;}
+}
+.five {
+    animation: weather 3s ease-in-out forwards;
+    animation-delay: 108s;
+}
+@keyframes calender {
+    0% {    top:8px;
+            left:312px;}
+    100% {  top: 316px;
+            left:-920px;}
+}
+.four {
+    animation: calender 3s ease-in-out forwards;
+    animation-delay: 108s;
+}
+/*End Animation*/
+.container3{
+    width: 608px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#weather{
+  font-family: 'amaticbold';
+  margin: 0px auto;
+  text-align: center;
+  text-transform: uppercase;
+}
+#weather h2 {
+  color: #fff;
+  font-size: 5em;
+  font-weight: 300;
+  text-align: center;
+}
+#weather li {
+  background: #fff;
+  background: rgba(255,255,255,0.90);
+  padding: 10px;
+  font-size: 1.2em;
+  margin:10px;
+  display: inline-block;
+  color:white;
+}
+#weather li:nth-of-type(odd) {
+    background-color: #0e1e31;
+}
+#weather li:nth-of-type(even) {
+    background-color: #034368;
+}
