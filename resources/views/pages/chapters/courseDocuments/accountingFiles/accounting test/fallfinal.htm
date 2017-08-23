@@ -1,0 +1,1541 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html><head>
+	<meta name='generator' content='ExamView Pro 4.0.8 [WinNT 6.02 (9200)]'>
+	<meta name='robots' content='noindex,nofollow'>
+	<title>Semester 1 Final - Chapters 1-8</title>
+	<STYLE TYPE="text/css">
+		.spacer { line-height:.7em; }
+		.title { font-size:13pt; font-weight:bold; font-family:"Times New Roman", "Times", serif;color:#000000; }
+		.qnumber { font-size:12pt; font-family:"Times New Roman", "Times", serif;color:#000000; text-align:right; }
+	</STYLE>
+<script language='JavaScript1.1'>
+<!--
+	// Copyright (c) 2003 FSCreations, Inc.
+	var listMap = '11111111111111111111111111111111111111111111111111';
+	var qtypeMap = '00000000000000000000000002222222222222222222222222';
+	var ansMap = new Array(50);
+	ansMap[0] = '47';
+	ansMap[1] = '44';
+	ansMap[2] = '57';
+	ansMap[3] = '50';
+	ansMap[4] = '43';
+	ansMap[5] = '52';
+	ansMap[6] = '53';
+	ansMap[7] = '4e';
+	ansMap[8] = '4f';
+	ansMap[9] = '5e';
+	ansMap[10] = '5f';
+	ansMap[11] = '58';
+	ansMap[12] = '59';
+	ansMap[13] = '5a';
+	ansMap[14] = '49';
+	ansMap[15] = '56';
+	ansMap[16] = '57';
+	ansMap[17] = '46';
+	ansMap[18] = '55';
+	ansMap[19] = '52';
+	ansMap[20] = '41';
+	ansMap[21] = '50';
+	ansMap[22] = '51';
+	ansMap[23] = '4c';
+	ansMap[24] = '4d';
+	ansMap[25] = '58';
+	ansMap[26] = '59';
+	ansMap[27] = '5d';
+	ansMap[28] = '5f';
+	ansMap[29] = '5d';
+	ansMap[30] = '5d';
+	ansMap[31] = '43';
+	ansMap[32] = '43';
+	ansMap[33] = '42';
+	ansMap[34] = '47';
+	ansMap[35] = '47';
+	ansMap[36] = '47';
+	ansMap[37] = '45';
+	ansMap[38] = '4a';
+	ansMap[39] = '4b';
+	ansMap[40] = '48';
+	ansMap[41] = '49';
+	ansMap[42] = '48';
+	ansMap[43] = '4e';
+	ansMap[44] = '4d';
+	ansMap[45] = '4b';
+	ansMap[46] = '52';
+	ansMap[47] = '53';
+	ansMap[48] = '56';
+	ansMap[49] = '51';
+	function HandleSubmit(f, forceSubmit)
+	{
+		var	numCorrect = 0;
+		var	numPossible = 0;
+		var	numBlank = 0;
+		var	index;
+		var	msg;
+		var	i;
+
+		f.student_name.value = StripSpaces(f.student_name.value);
+		f.student_id.value = StripSpaces(f.student_id.value);
+		f.student_email.value = StripSpaces(f.student_email.value);
+
+		FixMTF(f);
+		index = 0;
+		for (i=0; i < f.length; ++i) {
+			if (f.elements[i].name.indexOf(":") > 0) {
+				if (listMap.charAt(index) == "1") {
+					listIndex = f.elements[i].selectedIndex;
+					text = f.elements[i].options[listIndex].value;
+				} else {
+					f.elements[i].value = StripSpaces(f.elements[i].value);
+					text = f.elements[i].value;
+				}
+
+				text = StripSpaces(text);
+				if (text.length == 0)
+					++numBlank;
+				++index;
+			}
+		}
+
+		if (f.student_name.value == "") {
+			alert("Student name cannot be blank.");
+			return(false);
+		}
+
+		if (numBlank > 0) {
+			if (numBlank == 1)
+				msg = "1 question";
+			else
+				msg = numBlank + " questions";
+			if (!confirm("You have not answered " + msg +
+				"  Are you sure you want to end the test?"))
+				return(false);
+		}
+
+		index = 0;
+		f.score_details.value = "";
+		for (i=0; i < f.length; ++i) {
+			if (f.elements[i].name.indexOf(":") > 0) {
+				if (ansMap[index] == "")
+					f.score_details.value += "?";
+				else {
+					isCorrect = ScoreAnswer(index, f.elements[i]);
+					if (isCorrect) {
+						++numCorrect;
+						f.score_details.value += " ";
+					} else
+						f.score_details.value += "X";
+					++numPossible;
+				}
+				++index;
+			}
+		}
+
+		f.score_correct.value = numCorrect;
+		f.score_possible.value = numPossible;
+		if (numPossible > 0)
+			f.score_percent.value = Math.round(100.0 * numCorrect / numPossible);
+		else
+			f.score_percent.value = 0;
+
+		if (forceSubmit) {
+			f.submit();
+			return(false);
+		}
+		return(true);
+	}
+
+	function ScoreAnswer(answerIndex, answer)
+	{
+		var	listIndex;
+		var	responseText;
+		var	answerText;
+
+		if (listMap.charAt(answerIndex) == "1") {
+			listIndex = answer.selectedIndex;
+			responseText = answer.options[listIndex].value;
+		} else
+			responseText = answer.value;
+
+		answerText = TranslateAnswer(ansMap[answerIndex], answerIndex);
+		if (qtypeMap.charAt(answerIndex) == "5")
+			return(NumericCompare(responseText, answerText));
+		else if (qtypeMap.charAt(answerIndex) == "6")
+			return(MultiCompare(responseText, answerText));
+		else if (responseText.toUpperCase() == answerText.toUpperCase())
+			return(true);
+		else
+			return(false);
+	}
+
+	function TranslateAnswer(s, answerIndex)
+	{
+		var	value;
+		var	newString;
+		var	code;
+		var	i;
+
+		value = (answerIndex % 31) + 1;
+		newString = "";
+		for (i=0; i < s.length; i += 2) {
+			code = parseInt(s.substring(i, i + 2), 16);
+			newString += String.fromCharCode(code ^ value);
+		}
+
+		return(newString);
+	}
+
+	function StripSpaces(s)
+	{
+		var	len;
+		var	i;
+
+		len = s.length;
+		for (i=len - 1; i >= 0 && s.charAt(i) == " "; --i)
+			len = i;
+
+		if (len == 0)
+			s = "";
+		else if (len != s.length)
+			s = s.substring(0, len);
+
+		return(s);
+	}
+
+	function NumericCompare(s1, s2)
+	{
+		var	s1Sign;
+		var	s2Sign;
+		var	tempString;
+		var	decimalCount;
+		var	decimalPos;
+		var	numToDelete;
+		var	len;
+		var	ch;
+		var	i;
+
+		s1.toUpperCase();
+		s2.toUpperCase();
+		if (s1 == s2)
+			return(true);
+		else {
+			s1Sign = 1;
+			s2Sign = 1;
+
+			tempString = "";
+			for (i=0; i < s1.length; ++i) {
+				ch = s1.charAt(i);
+				if (ch == "-" && tempString.length == 0)
+					s1Sign = -1;
+				else if ((ch >= "0" && ch <= "9") || ch == ".")
+					tempString += ch;
+			}
+
+			s1 = tempString;
+
+			decimalCount = 0;
+			decimalPos = -1;
+			for (i=0; i < s1.length; ++i) {
+				if (s1.charAt(i) == '.') {
+					++decimalCount;
+					if (decimalPos < 0)
+						decimalPos = i;
+				}
+			}
+
+			if (decimalCount == 1 && decimalPos >= 0) {
+				len = s1.length;
+				for (i=len - 1; i >= decimalPos; --i) {
+					if (i == decimalPos || s1.charAt(i) == '0')
+						len = i;
+					else
+						break;
+				}
+
+				if (len < s1.length)
+					s1 = s1.substring(0, len);
+				if (s1.length == 0)
+					s1 = "0";
+			}
+
+			numToDelete = 0;
+			for (i=0; i < s1.length; ++i) {
+				if (s1.charAt(i) == "0")
+					++numToDelete;
+				else
+					break;
+			}
+
+			if (numToDelete > 0) {
+				if (numToDelete == s1.length)
+					--numToDelete;
+				if (numToDelete > 0)
+					s1 = s1.substring(numToDelete);
+			}
+
+			/////////////////////////////////////////////
+			tempString = "";
+			for (i=0; i < s2.length; ++i) {
+				ch = s2.charAt(i);
+				if (ch == "-" && tempString.length == 0)
+					s2Sign = -1;
+				else if ((ch >= "0" && ch <= "9") || ch == ".")
+					tempString += ch;
+			}
+
+			s2 = tempString;
+
+			decimalCount = 0;
+			decimalPos = -1;
+			for (i=0; i < s2.length; ++i) {
+				if (s2.charAt(i) == '.') {
+					++decimalCount;
+					if (decimalPos < 0)
+						decimalPos = i;
+				}
+			}
+
+			if (decimalCount == 1 && decimalPos >= 0) {
+				len = s2.length;
+				for (i=len - 1; i >= decimalPos; --i) {
+					if (i == decimalPos || s2.charAt(i) == '0')
+						len = i;
+					else
+						break;
+				}
+
+				if (len < s2.length)
+					s2 = s2.substring(0, len);
+				if (s2.length == 0)
+					s2 = "0";
+			}
+
+			numToDelete = 0;
+			for (i=0; i < s2.length; ++i) {
+				if (s2.charAt(i) == "0")
+					++numToDelete;
+				else
+					break;
+			}
+
+			if (numToDelete > 0) {
+				if (numToDelete == s2.length)
+					--numToDelete;
+				if (numToDelete > 0)
+					s2 = s2.substring(numToDelete);
+			}
+
+			if (s1Sign == s2Sign && s1 == s2)
+				return(true);
+		}
+
+		return(false);
+	}
+
+	function MultiCompare(responseText, answerText)
+	{
+		var	startIndex;
+		var	endIndex;
+		var	partialText;
+
+		responseText = responseText.toUpperCase();
+		answerText = answerText.toUpperCase();
+
+		startIndex = 0;
+		do {
+			endIndex = answerText.indexOf("\r", startIndex);
+			if (endIndex < 0)
+				partialText = answerText.substring(startIndex);
+			else
+				partialText = answerText.substring(startIndex, endIndex);
+
+			if (responseText == partialText)
+				return(true);
+
+			startIndex = endIndex + 1;
+		} while (endIndex > 0);
+
+		return(false);
+	}
+
+	function FixMTF(f)
+	{
+		var	text;
+		var	letter;
+		var	theList;
+		var	listIndex;
+		var	number;
+		var	i;
+
+		for (i=0; i < f.length; ++i) {
+			if (f.elements[i].name.indexOf("MTF:") == 0) {
+				number = parseInt(f.elements[i].name.substring(4), 10);
+
+				theList = f["MTF-" + number + "-1"];
+				if (theList) {
+					listIndex = theList.selectedIndex;
+					letter = theList.options[listIndex].value;
+				} else
+					letter = "";
+
+				text = StripSpaces(f["MTF-" + number + "-2"].value);
+				if (text == "")
+					f.elements[i].value = letter;
+				else
+					f.elements[i].value = letter + "," + text;
+			}
+		}
+	}
+
+	function AllowReset()
+	{
+		return(window.confirm("Do you want to clear all of your answers?"));
+	}
+
+// -->
+</script>
+</head>
+<body onResize='if(document.layers && navigator.appVersion.indexOf("Win") < 0){history.go(0);}'
+bgcolor='#FFFFFF' style='background-image:url(fallfinal_files/header.gif); background-repeat:no-repeat'>
+<noscript>
+	<h3><font color='#FF0000'>Javascript not enabled</font></h3>
+</noscript>
+<script language='JavaScript'>
+<!--
+if (navigator.appName.indexOf("Netscape") >= 0) {
+	if (parseInt(navigator.appVersion.charAt(0)) < 4)
+		alert("This document requires Netscape Navigator version 4.0 or later.");
+} else if (navigator.appName.indexOf("Explorer") >= 0) {
+	if (parseInt(navigator.appVersion.charAt(0)) < 4)
+		alert("This document requires Internet Explorer version 4.0 or later.");
+}
+// -->
+</script>
+<!-- BEGIN: FORM INFO -->
+<form name='TestForm' action='http://score.examview.com/cgi-bin/results.cgi' method='POST'
+	onSubmit='return(HandleSubmit(this, false))' onReset='return(AllowReset(this))'>
+<!-- END: FORM INFO -->
+<input type='hidden' name='product_version' value='4.0.8'>
+<input type='hidden' name='instructor_formalname' value=''>
+<input type='hidden' name='instructor_email' value='zvogel@usd405.com'>
+<input type='hidden' name='instructor_name' value='Zack Vogel'>
+<input type='hidden' name='instructor_org' value='USD 405'>
+<input type='hidden' name='instructor_city' value='Lyons'>
+<input type='hidden' name='instructor_state' value='KS'>
+<input type='hidden' name='test_name' value='Semester 1 Final - Chapters 1-8'>
+<input type='hidden' name='score_correct' value='0'>
+<input type='hidden' name='score_possible' value='50'>
+<input type='hidden' name='score_percent' value='0'>
+<input type='hidden' name='score_subjective' value='0'>
+<input type='hidden' name='score_details' value=''>
+<!-- BEGIN: STUDENT INFO -->
+<DIV CLASS='headerspacer'>&nbsp;</DIV>
+&nbsp;&nbsp;&nbsp;&nbsp;<B>Name:</B>&nbsp;
+<INPUT TYPE='TEXT' NAME='student_name' SIZE='30'> &nbsp;&nbsp;
+<B>ID:</B>&nbsp;<INPUT TYPE='TEXT' NAME='student_id' SIZE='12'><BR>
+<DIV CLASS='spacer'>&nbsp;</DIV>
+&nbsp;&nbsp;&nbsp;&nbsp;<B>Email:</B>&nbsp;
+<INPUT TYPE='TEXT' NAME='student_email' SIZE='45'>
+<BR><BR>
+<!-- END: STUDENT INFO -->
+<DIV CLASS='title'>Semester 1 Final - Chapters 1-8</DIV>
+
+<TABLE ALIGN='LEFT' WIDTH='100%' BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<!-- BEGIN: INSTRUCTION -->
+<tr valign='top'>
+	<td colspan='3'><br>
+<div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'><b>True/False</b></span><span style='font-family:"Times New Roman", "Times", serif;
+font-size:10pt; color:#000000'><br></span></div><div><span style='font-family:"Times New Roman",
+"Times", serif; font-size:12pt; color:#000000'><i>Indicate whether the sentence or statement is true
+or false.</i></span></div>
+<div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: INSTRUCTION -->
+<!-- BEGIN: QUESTION -207997:20 -->
+<tr valign='baseline'>	<td>		<select name='TF:1' align='top'>
+			<option value=' '> 
+			<option value='T'>T
+			<option value='F'>F
+		</select>
+	</td>	<td>		<p class='qnumber'>&nbsp;1.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>When
+a company pays insurance premiums in advance to an insurer, it records the payment as a liability
+because the insurer owes future coverage.</span></div><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION -207997:20 -->
+<!-- BEGIN: QUESTION -207997:21 -->
+<tr valign='baseline'>	<td>		<select name='TF:2' align='top'>
+			<option value=' '> 
+			<option value='T'>T
+			<option value='F'>F
+		</select>
+	</td>	<td>		<p class='qnumber'>&nbsp;2.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>When
+cash is paid on account, a liability is increased.</span></div><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION -207997:21 -->
+<!-- BEGIN: QUESTION -207997:26 -->
+<tr valign='baseline'>	<td>		<select name='TF:3' align='top'>
+			<option value=' '> 
+			<option value='T'>T
+			<option value='F'>F
+		</select>
+	</td>	<td>		<p class='qnumber'>&nbsp;3.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>A
+business has two types of equities.</span></div><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION -207997:26 -->
+<!-- BEGIN: QUESTION -207998:4 -->
+<tr valign='baseline'>	<td>		<select name='TF:4' align='top'>
+			<option value=' '> 
+			<option value='T'>T
+			<option value='F'>F
+		</select>
+	</td>	<td>		<p class='qnumber'>&nbsp;4.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>The
+normal balance side of an asset account is based on the location of the account in the accounting
+equation.</span></div><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION -207998:4 -->
+<!-- BEGIN: QUESTION -207998:24 -->
+<tr valign='baseline'>	<td>		<select name='TF:5' align='top'>
+			<option value=' '> 
+			<option value='T'>T
+			<option value='F'>F
+		</select>
+	</td>	<td>		<p class='qnumber'>&nbsp;5.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>Increases in revenue accounts are recorded as debits because they increase the owner's
+capital account.</span></div><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION -207998:24 -->
+<!-- BEGIN: QUESTION -207999:1 -->
+<tr valign='baseline'>	<td>		<select name='TF:6' align='top'>
+			<option value=' '> 
+			<option value='T'>T
+			<option value='F'>F
+		</select>
+	</td>	<td>		<p class='qnumber'>&nbsp;6.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>The
+Objective Evidence accounting concept requires that there be proof that a transaction did
+occur.</span></div><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION -207999:1 -->
+<!-- BEGIN: QUESTION -207999:11 -->
+<tr valign='baseline'>	<td>		<select name='TF:7' align='top'>
+			<option value=' '> 
+			<option value='T'>T
+			<option value='F'>F
+		</select>
+	</td>	<td>		<p class='qnumber'>&nbsp;7.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>The
+journal columns used to record paying cash to the owner for personal use are general debit and cash
+credit.</span></div><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION -207999:11 -->
+<!-- BEGIN: QUESTION -207999:13 -->
+<tr valign='baseline'>	<td>		<select name='TF:8' align='top'>
+			<option value=' '> 
+			<option value='T'>T
+			<option value='F'>F
+		</select>
+	</td>	<td>		<p class='qnumber'>&nbsp;8.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>Dollars and cents signs and decimal points should be used when writing amounts on
+ruled accounting pages.</span></div><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION -207999:13 -->
+<!-- BEGIN: QUESTION -207999:33 -->
+<tr valign='baseline'>	<td>		<select name='TF:9' align='top'>
+			<option value=' '> 
+			<option value='T'>T
+			<option value='F'>F
+		</select>
+	</td>	<td>		<p class='qnumber'>&nbsp;9.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>A
+source document is a form for recording transactions in chronological order.</span></div><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION -207999:33 -->
+<!-- BEGIN: QUESTION -208000:23 -->
+<tr valign='baseline'>	<td>		<select name='TF:10' align='top'>
+			<option value=' '> 
+			<option value='T'>T
+			<option value='F'>F
+		</select>
+	</td>	<td>		<p class='qnumber'>&nbsp;10.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>Because an account form has columns for the debit and credit balance of an account, it
+is often referred to as the balance-ruled account form.</span></div><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION -208000:23 -->
+<!-- BEGIN: QUESTION -208000:34 -->
+<tr valign='baseline'>	<td>		<select name='TF:11' align='top'>
+			<option value=' '> 
+			<option value='T'>T
+			<option value='F'>F
+		</select>
+	</td>	<td>		<p class='qnumber'>&nbsp;11.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>A
+check mark in parentheses below a General Debit column total indicates that the total is not
+posted.</span></div><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION -208000:34 -->
+<!-- BEGIN: QUESTION -208001:25 -->
+<tr valign='baseline'>	<td>		<select name='TF:12' align='top'>
+			<option value=' '> 
+			<option value='T'>T
+			<option value='F'>F
+		</select>
+	</td>	<td>		<p class='qnumber'>&nbsp;12.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>When
+writing a check, the first step is to prepare the check stub.</span></div><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION -208001:25 -->
+<!-- BEGIN: QUESTION -208001:28 -->
+<tr valign='baseline'>	<td>		<select name='TF:13' align='top'>
+			<option value=' '> 
+			<option value='T'>T
+			<option value='F'>F
+		</select>
+	</td>	<td>		<p class='qnumber'>&nbsp;13.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>A
+check that contains errors must be marked with the word VOID, and another check must be
+written.</span></div><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION -208001:28 -->
+<!-- BEGIN: QUESTION -208001:29 -->
+<tr valign='baseline'>	<td>		<select name='TF:14' align='top'>
+			<option value=' '> 
+			<option value='T'>T
+			<option value='F'>F
+		</select>
+	</td>	<td>		<p class='qnumber'>&nbsp;14.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>An
+outstanding check is one that has been issued but not yet reported on a bank statement by the
+bank.</span></div><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION -208001:29 -->
+<!-- BEGIN: QUESTION -208001:33 -->
+<tr valign='baseline'>	<td>		<select name='TF:15' align='top'>
+			<option value=' '> 
+			<option value='T'>T
+			<option value='F'>F
+		</select>
+	</td>	<td>		<p class='qnumber'>&nbsp;15.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>The
+journal entry for a payment on account using electronic funds transfer is exactly the same as when
+the payment is made by check.</span></div><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION -208001:33 -->
+<!-- BEGIN: QUESTION -208001:42 -->
+<tr valign='baseline'>	<td>		<select name='TF:16' align='top'>
+			<option value=' '> 
+			<option value='T'>T
+			<option value='F'>F
+		</select>
+	</td>	<td>		<p class='qnumber'>&nbsp;16.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>If
+any kind of error is made in preparing a check, a new check should be prepared and the old check
+should be thrown away immediately.</span></div><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION -208001:42 -->
+<!-- BEGIN: QUESTION -208002:24 -->
+<tr valign='baseline'>	<td>		<select name='TF:17' align='top'>
+			<option value=' '> 
+			<option value='T'>T
+			<option value='F'>F
+		</select>
+	</td>	<td>		<p class='qnumber'>&nbsp;17.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>The
+four questions asked when analyzing an adjustment are: Why? Where? When? and How?</span></div><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION -208002:24 -->
+<!-- BEGIN: QUESTION -208002:28 -->
+<tr valign='baseline'>	<td>		<select name='TF:18' align='top'>
+			<option value=' '> 
+			<option value='T'>T
+			<option value='F'>F
+		</select>
+	</td>	<td>		<p class='qnumber'>&nbsp;18.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>Two
+financial statements are prepared from the information on the work sheet.</span></div><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION -208002:28 -->
+<!-- BEGIN: QUESTION -208003:4 -->
+<tr valign='baseline'>	<td>		<select name='TF:19' align='top'>
+			<option value=' '> 
+			<option value='T'>T
+			<option value='F'>F
+		</select>
+	</td>	<td>		<p class='qnumber'>&nbsp;19.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>All
+financial statements have four-line headings.</span></div><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION -208003:4 -->
+<!-- BEGIN: QUESTION -208003:9 -->
+<tr valign='baseline'>	<td>		<select name='TF:20' align='top'>
+			<option value=' '> 
+			<option value='T'>T
+			<option value='F'>F
+		</select>
+	</td>	<td>		<p class='qnumber'>&nbsp;20.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>On an
+income statement, double lines are ruled across both amount columns to indicate that debits equal
+credits.</span></div><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION -208003:9 -->
+<!-- BEGIN: QUESTION -208003:10 -->
+<tr valign='baseline'>	<td>		<select name='TF:21' align='top'>
+			<option value=' '> 
+			<option value='T'>T
+			<option value='F'>F
+		</select>
+	</td>	<td>		<p class='qnumber'>&nbsp;21.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>For a
+service business, the revenue reported on an income statement includes components for total expenses
+and net income.</span></div><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION -208003:10 -->
+<!-- BEGIN: QUESTION -208003:14 -->
+<tr valign='baseline'>	<td>		<select name='TF:22' align='top'>
+			<option value=' '> 
+			<option value='T'>T
+			<option value='F'>F
+		</select>
+	</td>	<td>		<p class='qnumber'>&nbsp;22.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>The
+current capital to be reported on a balance sheet is calculated as: the capital account balance plus
+net income equals current capital.</span></div><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION -208003:14 -->
+<!-- BEGIN: QUESTION -208003:15 -->
+<tr valign='baseline'>	<td>		<select name='TF:23' align='top'>
+			<option value=' '> 
+			<option value='T'>T
+			<option value='F'>F
+		</select>
+	</td>	<td>		<p class='qnumber'>&nbsp;23.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>On a
+balance sheet, double lines are ruled across both amount columns to indicate that debits equal
+credits.</span></div><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION -208003:15 -->
+<!-- BEGIN: QUESTION -208004:15 -->
+<tr valign='baseline'>	<td>		<select name='TF:24' align='top'>
+			<option value=' '> 
+			<option value='T'>T
+			<option value='F'>F
+		</select>
+	</td>	<td>		<p class='qnumber'>&nbsp;24.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>The
+income summary account balance must be reduced to zero to prepare the account for the next fiscal
+period.</span></div><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION -208004:15 -->
+<!-- BEGIN: QUESTION -208004:18 -->
+<tr valign='baseline'>	<td>		<select name='TF:25' align='top'>
+			<option value=' '> 
+			<option value='T'>T
+			<option value='F'>F
+		</select>
+	</td>	<td>		<p class='qnumber'>&nbsp;25.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>A
+post-closing trial balance verifies the equality of debits and credits in a general ledger after the
+closing entries are posted.</span></div><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION -208004:18 -->
+<!-- BEGIN: INSTRUCTION -->
+<tr valign='top'>
+	<td colspan='3'><br>
+<div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'><b>Multiple Choice</b></span><span style='font-family:"Times New Roman", "Times",
+serif; font-size:10pt; color:#000000'><br></span></div><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'><i>Identify the
+letter of the choice that best completes the statement or answers the question.</i></span></div>
+<div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: INSTRUCTION -->
+<!-- BEGIN: QUESTION -207997:46 -->
+<tr valign='baseline'>	<td>		<select name='MC:26' align='top'>
+			<option value=' '> 
+			<option value='A'>A
+			<option value='B'>B
+			<option value='C'>C
+			<option value='D'>D
+		</select>
+	</td>	<td>		<p class='qnumber'>&nbsp;26.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>Recording and reporting a business's financial information separately from the owner's
+financial information is an application of the accounting concept ____.</span></div><div
+style='font-size:2pt'></div><table cellpadding='0' cellspacing='0' width='83%' border='0'><tr
+valign='baseline'><td><div><span style='font-family:"Times New Roman", "Times", serif;
+font-size:12pt; color:#000000'>a.</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>Unit of
+Measurement</span></div></td><td><div><span style='font-family:"Times New Roman", "Times", serif;
+font-size:12pt; color:#000000'>c.</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>Going
+Concern</span></div></td></tr><tr valign='baseline'><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>b.</span></div></td><td><div><span style='font-family:"Times New Roman", "Times",
+serif; font-size:12pt; color:#000000'>Business Entity</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>d.</span></div></td><td><div><span style='font-family:"Times New Roman", "Times",
+serif; font-size:12pt; color:#000000'>Separation of Records</span></div></td></tr><tr height='0'
+style='border:none'><td width='5%' style='width:18pt; padding:0'></td><td width='46%'
+style='width:193pt; padding:0'></td><td width='4%' style='width:18pt; padding:0'></td><td width='45%'
+style='width:193pt; padding:0'></td></tr></table><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION -207997:46 -->
+<!-- BEGIN: QUESTION -207997:55 -->
+<tr valign='baseline'>	<td>		<select name='MC:27' align='top'>
+			<option value=' '> 
+			<option value='A'>A
+			<option value='B'>B
+			<option value='C'>C
+			<option value='D'>D
+		</select>
+	</td>	<td>		<p class='qnumber'>&nbsp;27.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>When
+a transaction changes only one side of the equation, if one account is increased, the other account
+on the same side must ____.</span></div><div style='font-size:2pt'></div><table cellpadding='0'
+cellspacing='0' width='83%' border='0'><tr valign='baseline'><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>a.</span></div></td><td><div><span style='font-family:"Times New Roman", "Times",
+serif; font-size:12pt; color:#000000'>increase</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>c.</span></div></td><td><div><span style='font-family:"Times New Roman", "Times",
+serif; font-size:12pt; color:#000000'>not change</span></div></td></tr><tr
+valign='baseline'><td><div><span style='font-family:"Times New Roman", "Times", serif;
+font-size:12pt; color:#000000'>b.</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>decrease</span></div></td><td><div><span style='font-family:"Times New Roman",
+"Times", serif; font-size:12pt; color:#000000'>d.</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>none of the
+above</span></div></td></tr><tr height='0' style='border:none'><td width='5%' style='width:18pt;
+padding:0'></td><td width='46%' style='width:193pt; padding:0'></td><td width='4%' style='width:18pt;
+padding:0'></td><td width='45%' style='width:193pt; padding:0'></td></tr></table><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION -207997:55 -->
+<!-- BEGIN: QUESTION -207997:56 -->
+<tr valign='baseline'>	<td>		<select name='MC:28' align='top'>
+			<option value=' '> 
+			<option value='A'>A
+			<option value='B'>B
+			<option value='C'>C
+			<option value='D'>D
+		</select>
+	</td>	<td>		<p class='qnumber'>&nbsp;28.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>Prepaid Insurance is ____.</span></div><div style='font-size:2pt'></div><table
+cellpadding='0' cellspacing='0' width='83%' border='0'><tr valign='baseline'><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>a.</span></div></td><td><div><span style='font-family:"Times New Roman", "Times",
+serif; font-size:12pt; color:#000000'>an asset account</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>c.</span></div></td><td><div><span style='font-family:"Times New Roman", "Times",
+serif; font-size:12pt; color:#000000'>an owner's equity account</span></div></td></tr><tr
+valign='baseline'><td><div><span style='font-family:"Times New Roman", "Times", serif;
+font-size:12pt; color:#000000'>b.</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>a liability
+account</span></div></td><td><div><span style='font-family:"Times New Roman", "Times", serif;
+font-size:12pt; color:#000000'>d.</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>none of the
+above</span></div></td></tr><tr height='0' style='border:none'><td width='5%' style='width:18pt;
+padding:0'></td><td width='46%' style='width:193pt; padding:0'></td><td width='4%' style='width:18pt;
+padding:0'></td><td width='45%' style='width:193pt; padding:0'></td></tr></table><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION -207997:56 -->
+<!-- BEGIN: QUESTION -207997:59 -->
+<tr valign='baseline'>	<td>		<select name='MC:29' align='top'>
+			<option value=' '> 
+			<option value='A'>A
+			<option value='B'>B
+			<option value='C'>C
+			<option value='D'>D
+		</select>
+	</td>	<td>		<p class='qnumber'>&nbsp;29.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>When
+supplies are bought on account, the business to whom money is owed is ____.</span></div><div
+style='font-size:2pt'></div><table cellpadding='0' cellspacing='0' width='83%' border='0'><tr
+valign='baseline'><td><div><span style='font-family:"Times New Roman", "Times", serif;
+font-size:12pt; color:#000000'>a.</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>an asset
+account</span></div></td><td><div><span style='font-family:"Times New Roman", "Times", serif;
+font-size:12pt; color:#000000'>c.</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>an equity
+account</span></div></td></tr><tr valign='baseline'><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>b.</span></div></td><td><div><span style='font-family:"Times New Roman", "Times",
+serif; font-size:12pt; color:#000000'>a liability account</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>d.</span></div></td><td><div><span style='font-family:"Times New Roman", "Times",
+serif; font-size:12pt; color:#000000'>a capital account</span></div></td></tr><tr height='0'
+style='border:none'><td width='5%' style='width:18pt; padding:0'></td><td width='46%'
+style='width:193pt; padding:0'></td><td width='4%' style='width:18pt; padding:0'></td><td width='45%'
+style='width:193pt; padding:0'></td></tr></table><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION -207997:59 -->
+<!-- BEGIN: QUESTION -207997:63 -->
+<tr valign='baseline'>	<td>		<select name='MC:30' align='top'>
+			<option value=' '> 
+			<option value='A'>A
+			<option value='B'>B
+			<option value='C'>C
+			<option value='D'>D
+		</select>
+	</td>	<td>		<p class='qnumber'>&nbsp;30.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>To
+start a business, the owner invested $8,000.00, bought $1,500.00 of supplies, insurance coverage of
+$500.00, and bought an additional $300.00 of supplies on account. Total assets are
+____.</span></div><div style='font-size:2pt'></div><table cellpadding='0' cellspacing='0' width='83%'
+border='0'><tr valign='baseline'><td><div><span style='font-family:"Times New Roman", "Times", serif;
+font-size:12pt; color:#000000'>a.</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>$5,700.00</span></div></td><td><div><span style='font-family:"Times New Roman",
+"Times", serif; font-size:12pt; color:#000000'>c.</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>$6,000.00</span></div></td></tr><tr valign='baseline'><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>b.</span></div></td><td><div><span style='font-family:"Times New Roman", "Times",
+serif; font-size:12pt; color:#000000'>$7,000.00</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>d.</span></div></td><td><div><span style='font-family:"Times New Roman", "Times",
+serif; font-size:12pt; color:#000000'>none of the above</span></div></td></tr><tr height='0'
+style='border:none'><td width='5%' style='width:18pt; padding:0'></td><td width='46%'
+style='width:193pt; padding:0'></td><td width='4%' style='width:18pt; padding:0'></td><td width='45%'
+style='width:193pt; padding:0'></td></tr></table><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION -207997:63 -->
+<!-- BEGIN: QUESTION -207998:39 -->
+<tr valign='baseline'>	<td>		<select name='MC:31' align='top'>
+			<option value=' '> 
+			<option value='A'>A
+			<option value='B'>B
+			<option value='C'>C
+			<option value='D'>D
+		</select>
+	</td>	<td>		<p class='qnumber'>&nbsp;31.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>If an
+amount is recorded on the side of a T account opposite the normal balance side, the account balance
+is ____.</span></div><div style='font-size:2pt'></div><table cellpadding='0' cellspacing='0'
+width='83%' border='0'><tr valign='baseline'><td><div><span style='font-family:"Times New Roman",
+"Times", serif; font-size:12pt; color:#000000'>a.</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>increased</span></div></td><td><div><span style='font-family:"Times New Roman",
+"Times", serif; font-size:12pt; color:#000000'>c.</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>unaffected</span></div></td></tr><tr valign='baseline'><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>b.</span></div></td><td><div><span style='font-family:"Times New Roman", "Times",
+serif; font-size:12pt; color:#000000'>decreased</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>d.</span></div></td><td><div><span style='font-family:"Times New Roman", "Times",
+serif; font-size:12pt; color:#000000'>correct</span></div></td></tr><tr height='0'
+style='border:none'><td width='5%' style='width:18pt; padding:0'></td><td width='46%'
+style='width:193pt; padding:0'></td><td width='4%' style='width:18pt; padding:0'></td><td width='45%'
+style='width:193pt; padding:0'></td></tr></table><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION -207998:39 -->
+<!-- BEGIN: QUESTION -207998:41 -->
+<tr valign='baseline'>	<td>		<select name='MC:32' align='top'>
+			<option value=' '> 
+			<option value='A'>A
+			<option value='B'>B
+			<option value='C'>C
+			<option value='D'>D
+		</select>
+	</td>	<td>		<p class='qnumber'>&nbsp;32.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>When
+the owner invests cash in a business, the owner's capital account is ____.</span></div><div
+style='font-size:2pt'></div><table cellpadding='0' cellspacing='0' width='83%' border='0'><tr
+valign='baseline'><td><div><span style='font-family:"Times New Roman", "Times", serif;
+font-size:12pt; color:#000000'>a.</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>increased by a
+debit</span></div></td><td><div><span style='font-family:"Times New Roman", "Times", serif;
+font-size:12pt; color:#000000'>c.</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>decreased by a
+debit</span></div></td></tr><tr valign='baseline'><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>b.</span></div></td><td><div><span style='font-family:"Times New Roman", "Times",
+serif; font-size:12pt; color:#000000'>increased by a credit</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>d.</span></div></td><td><div><span style='font-family:"Times New Roman", "Times",
+serif; font-size:12pt; color:#000000'>decreased by a credit</span></div></td></tr><tr height='0'
+style='border:none'><td width='5%' style='width:18pt; padding:0'></td><td width='46%'
+style='width:193pt; padding:0'></td><td width='4%' style='width:18pt; padding:0'></td><td width='45%'
+style='width:193pt; padding:0'></td></tr></table><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION -207998:41 -->
+<!-- BEGIN: QUESTION -207998:51 -->
+<tr valign='baseline'>	<td>		<select name='MC:33' align='top'>
+			<option value=' '> 
+			<option value='A'>A
+			<option value='B'>B
+			<option value='C'>C
+			<option value='D'>D
+		</select>
+	</td>	<td>		<p class='qnumber'>&nbsp;33.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>The
+values of all things owned (assets) are on the accounting equation's ____.</span></div><div
+style='font-size:2pt'></div><table cellpadding='0' cellspacing='0' width='83%' border='0'><tr
+valign='baseline'><td><div><span style='font-family:"Times New Roman", "Times", serif;
+font-size:12pt; color:#000000'>a.</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>left
+side</span></div></td><td><div><span style='font-family:"Times New Roman", "Times", serif;
+font-size:12pt; color:#000000'>c.</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>credit
+side</span></div></td></tr><tr valign='baseline'><td><div><span style='font-family:"Times New Roman",
+"Times", serif; font-size:12pt; color:#000000'>b.</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>right
+side</span></div></td><td><div><span style='font-family:"Times New Roman", "Times", serif;
+font-size:12pt; color:#000000'>d.</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>none of the
+above</span></div></td></tr><tr height='0' style='border:none'><td width='5%' style='width:18pt;
+padding:0'></td><td width='46%' style='width:193pt; padding:0'></td><td width='4%' style='width:18pt;
+padding:0'></td><td width='45%' style='width:193pt; padding:0'></td></tr></table><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION -207998:51 -->
+<!-- BEGIN: QUESTION -207998:58 -->
+<tr valign='baseline'>	<td>		<select name='MC:34' align='top'>
+			<option value=' '> 
+			<option value='A'>A
+			<option value='B'>B
+			<option value='C'>C
+			<option value='D'>D
+		</select>
+	</td>	<td>		<p class='qnumber'>&nbsp;34.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>Decreases in any liability account are shown on a T account's ____.</span></div><div
+style='font-size:2pt'></div><table cellpadding='0' cellspacing='0' width='83%' border='0'><tr
+valign='baseline'><td><div><span style='font-family:"Times New Roman", "Times", serif;
+font-size:12pt; color:#000000'>a.</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>debit
+side</span></div></td><td><div><span style='font-family:"Times New Roman", "Times", serif;
+font-size:12pt; color:#000000'>c.</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>right
+side</span></div></td></tr><tr valign='baseline'><td><div><span style='font-family:"Times New Roman",
+"Times", serif; font-size:12pt; color:#000000'>b.</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>credit
+side</span></div></td><td><div><span style='font-family:"Times New Roman", "Times", serif;
+font-size:12pt; color:#000000'>d.</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>none of the
+above</span></div></td></tr><tr height='0' style='border:none'><td width='5%' style='width:18pt;
+padding:0'></td><td width='46%' style='width:193pt; padding:0'></td><td width='4%' style='width:18pt;
+padding:0'></td><td width='45%' style='width:193pt; padding:0'></td></tr></table><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION -207998:58 -->
+<!-- BEGIN: QUESTION -207999:37 -->
+<tr valign='baseline'>	<td>		<select name='MC:35' align='top'>
+			<option value=' '> 
+			<option value='A'>A
+			<option value='B'>B
+			<option value='C'>C
+			<option value='D'>D
+		</select>
+	</td>	<td>		<p class='qnumber'>&nbsp;35.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>Preparing source documents for each transaction is an application of the accounting
+concept ____.</span></div><div style='font-size:2pt'></div><table cellpadding='0' cellspacing='0'
+width='83%' border='0'><tr valign='baseline'><td><div><span style='font-family:"Times New Roman",
+"Times", serif; font-size:12pt; color:#000000'>a.</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>Business
+Entity</span></div></td><td><div><span style='font-family:"Times New Roman", "Times", serif;
+font-size:12pt; color:#000000'>c.</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>Objective
+Evidence</span></div></td></tr><tr valign='baseline'><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>b.</span></div></td><td><div><span style='font-family:"Times New Roman", "Times",
+serif; font-size:12pt; color:#000000'>Unit of Measurement</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>d.</span></div></td><td><div><span style='font-family:"Times New Roman", "Times",
+serif; font-size:12pt; color:#000000'>Going Concern</span></div></td></tr><tr height='0'
+style='border:none'><td width='5%' style='width:18pt; padding:0'></td><td width='46%'
+style='width:193pt; padding:0'></td><td width='4%' style='width:18pt; padding:0'></td><td width='45%'
+style='width:193pt; padding:0'></td></tr></table><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION -207999:37 -->
+<!-- BEGIN: QUESTION -207999:39 -->
+<tr valign='baseline'>	<td>		<select name='MC:36' align='top'>
+			<option value=' '> 
+			<option value='A'>A
+			<option value='B'>B
+			<option value='C'>C
+			<option value='D'>D
+		</select>
+	</td>	<td>		<p class='qnumber'>&nbsp;36.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>A
+journal entry includes ____.</span></div><div style='font-size:2pt'></div><table cellpadding='0'
+cellspacing='0' width='83%' border='0'><tr valign='baseline'><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>a.</span></div></td><td><div><span style='font-family:"Times New Roman", "Times",
+serif; font-size:12pt; color:#000000'>the debit part of a transaction recorded under one date and
+credit part recorded under a later date</span></div></td></tr><tr valign='baseline'><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>b.</span></div></td><td><div><span style='font-family:"Times New Roman", "Times",
+serif; font-size:12pt; color:#000000'>the debit and credit parts of a transaction recorded in one
+place</span></div></td></tr><tr valign='baseline'><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>c.</span></div></td><td><div><span style='font-family:"Times New Roman", "Times",
+serif; font-size:12pt; color:#000000'>more debits than credits</span></div></td></tr><tr
+valign='baseline'><td><div><span style='font-family:"Times New Roman", "Times", serif;
+font-size:12pt; color:#000000'>d.</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>none of the
+above</span></div></td></tr><tr height='0' style='border:none'><td width='5%' style='width:18pt;
+padding:0'></td><td width='95%' style='width:405pt; padding:0'></td></tr></table><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION -207999:39 -->
+<!-- BEGIN: QUESTION -207999:52 -->
+<tr valign='baseline'>	<td>		<select name='MC:37' align='top'>
+			<option value=' '> 
+			<option value='A'>A
+			<option value='B'>B
+			<option value='C'>C
+			<option value='D'>D
+		</select>
+	</td>	<td>		<p class='qnumber'>&nbsp;37.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>When
+cash is paid for utilities, the amount is recorded in the ____.</span></div><div
+style='font-size:2pt'></div><table cellpadding='0' cellspacing='0' width='83%' border='0'><tr
+valign='baseline'><td><div><span style='font-family:"Times New Roman", "Times", serif;
+font-size:12pt; color:#000000'>a.</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>Cash Credit
+column and General Debit column</span></div></td></tr><tr valign='baseline'><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>b.</span></div></td><td><div><span style='font-family:"Times New Roman", "Times",
+serif; font-size:12pt; color:#000000'>Sales Credit column and General Debit
+column</span></div></td></tr><tr valign='baseline'><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>c.</span></div></td><td><div><span style='font-family:"Times New Roman", "Times",
+serif; font-size:12pt; color:#000000'>General Credit column and Cash Debit
+column</span></div></td></tr><tr valign='baseline'><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>d.</span></div></td><td><div><span style='font-family:"Times New Roman", "Times",
+serif; font-size:12pt; color:#000000'>General Credit column and Sales Credit
+column</span></div></td></tr><tr height='0' style='border:none'><td width='5%' style='width:18pt;
+padding:0'></td><td width='95%' style='width:405pt; padding:0'></td></tr></table><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION -207999:52 -->
+<!-- BEGIN: QUESTION -208000:37 -->
+<tr valign='baseline'>	<td>		<select name='MC:38' align='top'>
+			<option value=' '> 
+			<option value='A'>A
+			<option value='B'>B
+			<option value='C'>C
+			<option value='D'>D
+		</select>
+	</td>	<td>		<p class='qnumber'>&nbsp;38.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>When
+accounts are arranged in a general ledger, account numbers are assigned, and the chart of accounts is
+kept up to date, the accounting personnel are ____.</span></div><div
+style='font-size:2pt'></div><table cellpadding='0' cellspacing='0' width='83%' border='0'><tr
+valign='baseline'><td><div><span style='font-family:"Times New Roman", "Times", serif;
+font-size:12pt; color:#000000'>a.</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>posting</span></div></td><td><div><span style='font-family:"Times New Roman", "Times",
+serif; font-size:12pt; color:#000000'>c.</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>journalizing</span></div></td></tr><tr valign='baseline'><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>b.</span></div></td><td><div><span style='font-family:"Times New Roman", "Times",
+serif; font-size:12pt; color:#000000'>doing file maintenance</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>d.</span></div></td><td><div><span style='font-family:"Times New Roman", "Times",
+serif; font-size:12pt; color:#000000'>none of the above</span></div></td></tr><tr height='0'
+style='border:none'><td width='5%' style='width:18pt; padding:0'></td><td width='46%'
+style='width:193pt; padding:0'></td><td width='4%' style='width:18pt; padding:0'></td><td width='45%'
+style='width:193pt; padding:0'></td></tr></table><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION -208000:37 -->
+<!-- BEGIN: QUESTION -208000:38 -->
+<tr valign='baseline'>	<td>		<select name='MC:39' align='top'>
+			<option value=' '> 
+			<option value='A'>A
+			<option value='B'>B
+			<option value='C'>C
+			<option value='D'>D
+		</select>
+	</td>	<td>		<p class='qnumber'>&nbsp;39.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>A new
+account to be added between accounts 530 and 540 will be assigned the number ____.</span></div><div
+style='font-size:2pt'></div><table cellpadding='0' cellspacing='0' width='83%' border='0'><tr
+valign='baseline'><td><div><span style='font-family:"Times New Roman", "Times", serif;
+font-size:12pt; color:#000000'>a.</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>531</span></div></td><td><div><span style='font-family:"Times New Roman", "Times",
+serif; font-size:12pt; color:#000000'>c.</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>537</span></div></td></tr><tr valign='baseline'><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>b.</span></div></td><td><div><span style='font-family:"Times New Roman", "Times",
+serif; font-size:12pt; color:#000000'>535</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>d.</span></div></td><td><div><span style='font-family:"Times New Roman", "Times",
+serif; font-size:12pt; color:#000000'>539</span></div></td></tr><tr height='0'
+style='border:none'><td width='5%' style='width:18pt; padding:0'></td><td width='46%'
+style='width:193pt; padding:0'></td><td width='4%' style='width:18pt; padding:0'></td><td width='45%'
+style='width:193pt; padding:0'></td></tr></table><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION -208000:38 -->
+<!-- BEGIN: QUESTION -208000:50 -->
+<tr valign='baseline'>	<td>		<select name='MC:40' align='top'>
+			<option value=' '> 
+			<option value='A'>A
+			<option value='B'>B
+			<option value='C'>C
+			<option value='D'>D
+		</select>
+	</td>	<td>		<p class='qnumber'>&nbsp;40.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>Separate amounts in the Cash Debit column of a journal are ____.</span></div><div
+style='font-size:2pt'></div><table cellpadding='0' cellspacing='0' width='83%' border='0'><tr
+valign='baseline'><td><div><span style='font-family:"Times New Roman", "Times", serif;
+font-size:12pt; color:#000000'>a.</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>posted
+frequently</span></div></td><td><div><span style='font-family:"Times New Roman", "Times", serif;
+font-size:12pt; color:#000000'>c.</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>sometimes posted
+individually</span></div></td></tr><tr valign='baseline'><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>b.</span></div></td><td><div><span style='font-family:"Times New Roman", "Times",
+serif; font-size:12pt; color:#000000'>not posted</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>d.</span></div></td><td><div><span style='font-family:"Times New Roman", "Times",
+serif; font-size:12pt; color:#000000'>all of the above</span></div></td></tr><tr height='0'
+style='border:none'><td width='5%' style='width:18pt; padding:0'></td><td width='46%'
+style='width:193pt; padding:0'></td><td width='4%' style='width:18pt; padding:0'></td><td width='45%'
+style='width:193pt; padding:0'></td></tr></table><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION -208000:50 -->
+<!-- BEGIN: QUESTION -208001:53 -->
+<tr valign='baseline'>	<td>		<select name='MC:41' align='top'>
+			<option value=' '> 
+			<option value='A'>A
+			<option value='B'>B
+			<option value='C'>C
+			<option value='D'>D
+		</select>
+	</td>	<td>		<p class='qnumber'>&nbsp;41.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>Each
+time cash or checks are placed in a bank account, the customer prepares a ____.</span></div><div
+style='font-size:2pt'></div><table cellpadding='0' cellspacing='0' width='83%' border='0'><tr
+valign='baseline'><td><div><span style='font-family:"Times New Roman", "Times", serif;
+font-size:12pt; color:#000000'>a.</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>signature
+card</span></div></td><td><div><span style='font-family:"Times New Roman", "Times", serif;
+font-size:12pt; color:#000000'>c.</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>check</span></div></td></tr><tr valign='baseline'><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>b.</span></div></td><td><div><span style='font-family:"Times New Roman", "Times",
+serif; font-size:12pt; color:#000000'>deposit slip</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>d.</span></div></td><td><div><span style='font-family:"Times New Roman", "Times",
+serif; font-size:12pt; color:#000000'>none of the above</span></div></td></tr><tr height='0'
+style='border:none'><td width='5%' style='width:18pt; padding:0'></td><td width='46%'
+style='width:193pt; padding:0'></td><td width='4%' style='width:18pt; padding:0'></td><td width='45%'
+style='width:193pt; padding:0'></td></tr></table><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION -208001:53 -->
+<!-- BEGIN: QUESTION -208002:37 -->
+<tr valign='baseline'>	<td>		<select name='MC:42' align='top'>
+			<option value=' '> 
+			<option value='A'>A
+			<option value='B'>B
+			<option value='C'>C
+			<option value='D'>D
+		</select>
+	</td>	<td>		<p class='qnumber'>&nbsp;42.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>Reporting changes in financial information for a specific period of time in the form
+of financial statements is an application of the accounting concept ____.</span></div><div
+style='font-size:2pt'></div><table cellpadding='0' cellspacing='0' width='83%' border='0'><tr
+valign='baseline'><td><div><span style='font-family:"Times New Roman", "Times", serif;
+font-size:12pt; color:#000000'>a.</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>Matching
+Expenses with Revenue</span></div></td><td><div><span style='font-family:"Times New Roman", "Times",
+serif; font-size:12pt; color:#000000'>c.</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>Consistent
+Reporting</span></div></td></tr><tr valign='baseline'><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>b.</span></div></td><td><div><span style='font-family:"Times New Roman", "Times",
+serif; font-size:12pt; color:#000000'>Accounting Period Cycle</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>d.</span></div></td><td><div><span style='font-family:"Times New Roman", "Times",
+serif; font-size:12pt; color:#000000'>Going Concern</span></div></td></tr><tr height='0'
+style='border:none'><td width='5%' style='width:18pt; padding:0'></td><td width='46%'
+style='width:193pt; padding:0'></td><td width='4%' style='width:18pt; padding:0'></td><td width='45%'
+style='width:193pt; padding:0'></td></tr></table><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION -208002:37 -->
+<!-- BEGIN: QUESTION -208002:40 -->
+<tr valign='baseline'>	<td>		<select name='MC:43' align='top'>
+			<option value=' '> 
+			<option value='A'>A
+			<option value='B'>B
+			<option value='C'>C
+			<option value='D'>D
+		</select>
+	</td>	<td>		<p class='qnumber'>&nbsp;43.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>Changes recorded on a work sheet to update general ledger accounts at the end of a
+fiscal period are ____.</span></div><div style='font-size:2pt'></div><table cellpadding='0'
+cellspacing='0' width='83%' border='0'><tr valign='baseline'><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>a.</span></div></td><td><div><span style='font-family:"Times New Roman", "Times",
+serif; font-size:12pt; color:#000000'>found on a trial balance</span></div></td></tr><tr
+valign='baseline'><td><div><span style='font-family:"Times New Roman", "Times", serif;
+font-size:12pt; color:#000000'>b.</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>recorded in a
+work sheet's Income Statement columns</span></div></td></tr><tr valign='baseline'><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>c.</span></div></td><td><div><span style='font-family:"Times New Roman", "Times",
+serif; font-size:12pt; color:#000000'>reported on financial statements</span></div></td></tr><tr
+valign='baseline'><td><div><span style='font-family:"Times New Roman", "Times", serif;
+font-size:12pt; color:#000000'>d.</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>adjustments</span></div></td></tr><tr height='0' style='border:none'><td width='5%'
+style='width:18pt; padding:0'></td><td width='95%' style='width:405pt; padding:0'></td></tr></table><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION -208002:40 -->
+<!-- BEGIN: QUESTION -208003:45 -->
+<tr valign='baseline'>	<td>		<select name='MC:44' align='top'>
+			<option value=' '> 
+			<option value='A'>A
+			<option value='B'>B
+			<option value='C'>C
+			<option value='D'>D
+		</select>
+	</td>	<td>		<p class='qnumber'>&nbsp;44.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>The
+percentage relationship between one financial statement item and the total that includes that item is
+____.</span></div><div style='font-size:2pt'></div><table cellpadding='0' cellspacing='0' width='83%'
+border='0'><tr valign='baseline'><td><div><span style='font-family:"Times New Roman", "Times", serif;
+font-size:12pt; color:#000000'>a.</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>an
+adjustment</span></div></td><td><div><span style='font-family:"Times New Roman", "Times", serif;
+font-size:12pt; color:#000000'>c.</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>a component
+percentage</span></div></td></tr><tr valign='baseline'><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>b.</span></div></td><td><div><span style='font-family:"Times New Roman", "Times",
+serif; font-size:12pt; color:#000000'>an endorsement</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>d.</span></div></td><td><div><span style='font-family:"Times New Roman", "Times",
+serif; font-size:12pt; color:#000000'>none of the above</span></div></td></tr><tr height='0'
+style='border:none'><td width='5%' style='width:18pt; padding:0'></td><td width='46%'
+style='width:193pt; padding:0'></td><td width='4%' style='width:18pt; padding:0'></td><td width='45%'
+style='width:193pt; padding:0'></td></tr></table><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION -208003:45 -->
+<!-- BEGIN: QUESTION -208003:48 -->
+<tr valign='baseline'>	<td>		<select name='MC:45' align='top'>
+			<option value=' '> 
+			<option value='A'>A
+			<option value='B'>B
+			<option value='C'>C
+			<option value='D'>D
+		</select>
+	</td>	<td>		<p class='qnumber'>&nbsp;45.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>Information needed to prepare a balance sheet assets section is obtained from a work
+sheet's Account Title column and ____.</span></div><div style='font-size:2pt'></div><table
+cellpadding='0' cellspacing='0' width='83%' border='0'><tr valign='baseline'><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>a.</span></div></td><td><div><span style='font-family:"Times New Roman", "Times",
+serif; font-size:12pt; color:#000000'>Income Statement Debit column</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>c.</span></div></td><td><div><span style='font-family:"Times New Roman", "Times",
+serif; font-size:12pt; color:#000000'>Balance Sheet Debit column</span></div></td></tr><tr
+valign='baseline'><td><div><span style='font-family:"Times New Roman", "Times", serif;
+font-size:12pt; color:#000000'>b.</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>Income Statement
+Credit column</span></div></td><td><div><span style='font-family:"Times New Roman", "Times", serif;
+font-size:12pt; color:#000000'>d.</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>Balance Sheet
+Credit column</span></div></td></tr><tr height='0' style='border:none'><td width='5%'
+style='width:18pt; padding:0'></td><td width='46%' style='width:193pt; padding:0'></td><td width='4%'
+style='width:18pt; padding:0'></td><td width='45%' style='width:193pt; padding:0'></td></tr></table><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION -208003:48 -->
+<!-- BEGIN: QUESTION -208003:49 -->
+<tr valign='baseline'>	<td>		<select name='MC:46' align='top'>
+			<option value=' '> 
+			<option value='A'>A
+			<option value='B'>B
+			<option value='C'>C
+			<option value='D'>D
+		</select>
+	</td>	<td>		<p class='qnumber'>&nbsp;46.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>Information needed to prepare a balance sheet liabilities section is obtained from a
+work sheet's Account Title column and ____.</span></div><div style='font-size:2pt'></div><table
+cellpadding='0' cellspacing='0' width='83%' border='0'><tr valign='baseline'><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>a.</span></div></td><td><div><span style='font-family:"Times New Roman", "Times",
+serif; font-size:12pt; color:#000000'>Income Statement Debit column</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>c.</span></div></td><td><div><span style='font-family:"Times New Roman", "Times",
+serif; font-size:12pt; color:#000000'>Balance Sheet Debit column</span></div></td></tr><tr
+valign='baseline'><td><div><span style='font-family:"Times New Roman", "Times", serif;
+font-size:12pt; color:#000000'>b.</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>Income Statement
+Credit column</span></div></td><td><div><span style='font-family:"Times New Roman", "Times", serif;
+font-size:12pt; color:#000000'>d.</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>Balance Sheet
+Credit column</span></div></td></tr><tr height='0' style='border:none'><td width='5%'
+style='width:18pt; padding:0'></td><td width='46%' style='width:193pt; padding:0'></td><td width='4%'
+style='width:18pt; padding:0'></td><td width='45%' style='width:193pt; padding:0'></td></tr></table><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION -208003:49 -->
+<!-- BEGIN: QUESTION -208004:22 -->
+<tr valign='baseline'>	<td>		<select name='MC:47' align='top'>
+			<option value=' '> 
+			<option value='A'>A
+			<option value='B'>B
+			<option value='C'>C
+			<option value='D'>D
+		</select>
+	</td>	<td>		<p class='qnumber'>&nbsp;47.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>The
+journal entry to adjust Supplies is ____.</span></div><div style='font-size:2pt'></div><table
+cellpadding='0' cellspacing='0' width='83%' border='0'><tr valign='baseline'><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>a.</span></div></td><td><div><span style='font-family:"Times New Roman", "Times",
+serif; font-size:12pt; color:#000000'>debit Supplies; credit Supplies
+Expense</span></div></td></tr><tr valign='baseline'><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>b.</span></div></td><td><div><span style='font-family:"Times New Roman", "Times",
+serif; font-size:12pt; color:#000000'>debit Supplies Expense; credit
+Supplies</span></div></td></tr><tr valign='baseline'><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>c.</span></div></td><td><div><span style='font-family:"Times New Roman", "Times",
+serif; font-size:12pt; color:#000000'>debit Income Summary; credit Supplies</span></div></td></tr><tr
+valign='baseline'><td><div><span style='font-family:"Times New Roman", "Times", serif;
+font-size:12pt; color:#000000'>d.</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>debit Supplies
+Expense; credit Income Summary</span></div></td></tr><tr height='0' style='border:none'><td
+width='5%' style='width:18pt; padding:0'></td><td width='95%' style='width:405pt;
+padding:0'></td></tr></table><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION -208004:22 -->
+<!-- BEGIN: QUESTION -208004:26 -->
+<tr valign='baseline'>	<td>		<select name='MC:48' align='top'>
+			<option value=' '> 
+			<option value='A'>A
+			<option value='B'>B
+			<option value='C'>C
+			<option value='D'>D
+		</select>
+	</td>	<td>		<p class='qnumber'>&nbsp;48.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>Accounts used to accumulate information from one fiscal period to the next are ____
+accounts.</span></div><div style='font-size:2pt'></div><table cellpadding='0' cellspacing='0'
+width='83%' border='0'><tr valign='baseline'><td><div><span style='font-family:"Times New Roman",
+"Times", serif; font-size:12pt; color:#000000'>a.</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>revenue</span></div></td><td><div><span style='font-family:"Times New Roman", "Times",
+serif; font-size:12pt; color:#000000'>c.</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>temporary</span></div></td></tr><tr valign='baseline'><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>b.</span></div></td><td><div><span style='font-family:"Times New Roman", "Times",
+serif; font-size:12pt; color:#000000'>permanent</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>d.</span></div></td><td><div><span style='font-family:"Times New Roman", "Times",
+serif; font-size:12pt; color:#000000'>expense</span></div></td></tr><tr height='0'
+style='border:none'><td width='5%' style='width:18pt; padding:0'></td><td width='46%'
+style='width:193pt; padding:0'></td><td width='4%' style='width:18pt; padding:0'></td><td width='45%'
+style='width:193pt; padding:0'></td></tr></table><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION -208004:26 -->
+<!-- BEGIN: QUESTION -208004:39 -->
+<tr valign='baseline'>	<td>		<select name='MC:49' align='top'>
+			<option value=' '> 
+			<option value='A'>A
+			<option value='B'>B
+			<option value='C'>C
+			<option value='D'>D
+		</select>
+	</td>	<td>		<p class='qnumber'>&nbsp;49.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>Which
+accounting concept applies when financial statements are prepared from information on the work
+sheet?</span></div><div style='font-size:2pt'></div><table cellpadding='0' cellspacing='0'
+width='83%' border='0'><tr valign='baseline'><td><div><span style='font-family:"Times New Roman",
+"Times", serif; font-size:12pt; color:#000000'>a.</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>Objective
+Evidence</span></div></td><td><div><span style='font-family:"Times New Roman", "Times", serif;
+font-size:12pt; color:#000000'>c.</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>Accounting
+Period Cycle</span></div></td></tr><tr valign='baseline'><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>b.</span></div></td><td><div><span style='font-family:"Times New Roman", "Times",
+serif; font-size:12pt; color:#000000'>Consistent Reporting</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>d.</span></div></td><td><div><span style='font-family:"Times New Roman", "Times",
+serif; font-size:12pt; color:#000000'>Adequate Disclosure</span></div></td></tr><tr height='0'
+style='border:none'><td width='5%' style='width:18pt; padding:0'></td><td width='46%'
+style='width:193pt; padding:0'></td><td width='4%' style='width:18pt; padding:0'></td><td width='45%'
+style='width:193pt; padding:0'></td></tr></table><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION -208004:39 -->
+<!-- BEGIN: QUESTION -208004:45 -->
+<tr valign='baseline'>	<td>		<select name='MC:50' align='top'>
+			<option value=' '> 
+			<option value='A'>A
+			<option value='B'>B
+			<option value='C'>C
+			<option value='D'>D
+		</select>
+	</td>	<td>		<p class='qnumber'>&nbsp;50.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>Information needed to journalize a closing entry for expenses is obtained from the
+____.</span></div><div style='font-size:2pt'></div><table cellpadding='0' cellspacing='0' width='83%'
+border='0'><tr valign='baseline'><td><div><span style='font-family:"Times New Roman", "Times", serif;
+font-size:12pt; color:#000000'>a.</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>work sheet's
+Income Statement Credit column</span></div></td></tr><tr valign='baseline'><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>b.</span></div></td><td><div><span style='font-family:"Times New Roman", "Times",
+serif; font-size:12pt; color:#000000'>work sheet's Income Statement Debit
+column</span></div></td></tr><tr valign='baseline'><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'>c.</span></div></td><td><div><span style='font-family:"Times New Roman", "Times",
+serif; font-size:12pt; color:#000000'>work sheet's Adjustments Debit column</span></div></td></tr><tr
+valign='baseline'><td><div><span style='font-family:"Times New Roman", "Times", serif;
+font-size:12pt; color:#000000'>d.</span></div></td><td><div><span
+style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>work sheet's
+Adjustments Credit column</span></div></td></tr><tr height='0' style='border:none'><td width='5%'
+style='width:18pt; padding:0'></td><td width='95%' style='width:405pt; padding:0'></td></tr></table><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION -208004:45 -->
+</table><br clear='all'>
+<br>
+<br>
+<table align='left' width='100%' cellpadding='0' cellspacing='0' border='0'>
+<tr>
+    <td colspan='2' bgcolor='#000000'>
+    <div style='font-size:1pt'>&nbsp;</div>
+    </td>
+</tr>
+<tr>
+    <td><a href='javascript:alert("Use the mouse to submit.")'
+	   onMouseOver='window.status = "Grade and Submit"; return true'
+	   onMouseOut='window.status = ""; return true'
+	   onFocus='window.status = "Grade and Submit"; return true'
+	   onBlur='window.status = ""; return true'
+	   onClick="return(HandleSubmit(document.forms[0], true))">
+	     <img src="fallfinal_files/submit.gif" border='0' alt='Submit'></a>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="javascript:document.forms[0].reset()">
+	     <img src="fallfinal_files/reset.gif" border='0' alt='Reset'></a>
+    </td>
+    <td align='right'>
+	<a href="http://www.examview.com/studytip.html">
+	    <img src="fallfinal_files/help.gif" border='0' alt='Help'></a>
+    </td>
+</tr>
+</table>
+ 
+</form></body></html>
